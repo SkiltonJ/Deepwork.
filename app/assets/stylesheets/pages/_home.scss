@@ -1,16 +1,121 @@
-// Specific CSS for your home-page
+
+// nav-bar settings
+
+.nav-land {
+  display: flex;
+  background-color: $cyan;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-right: 25px;
+  padding-top: 15px;
+  p {
+    font-size: 24px;
+  }
+}
+
+// general link properties
+.gen-link {
+  text-decoration: none;
+  color: $gray;
+  transition: .3s;
+  &:hover {
+    color: $navy-blue;
+    transition: .3s;
+  }
+}
 
 
+// hero section
+.hero {
+  background-color: $cyan;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10%;
+  height: 60vh;
+  h1 {
+    font-size: 72px;
+    margin-bottom: 0;
+    font-family: $zodiak;
+  }
+  p {
+    font-family: $satoshi;
+    font-size: 18px;
+  }
+  span {
+    color: $navy-blue;
+    font-weight: 500;
+  }
+}
 
-.butt-container {
+// landing button
+.cta {
+  margin-top: 35px;
+}
+.land-button {
+  text-decoration: none;
+  color: black;
+  padding: 10px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  font-family: $zodiak;
+  font-size: 18px;
+  &:hover {
+    color: $navy-blue;
+  }
+}
+
+// white section
+.explain-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 50px;
-  width: 100px;
-  border-radius: 20px;
-  background-color: $gold;
-  p {
-    margin: 0 auto;
+  flex-direction: column;
+}
+.how-it-works {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  h3 {
+    font-family: $satoshi;
+    font-weight: 400;
+    font-size: 26px;
   }
+}
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 4em;
+  align-content: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1100px;
+  margin-bottom: 50px;
+  text-align: center;
+  h4 {
+    font-size: 24px;
+    font-family: $satoshi;
+    font-weight: 300;
+  }
+  span {
+    color: $navy-blue;
+    padding-right: 5px;
+    font-weight: 500;
+  }
+}
+.left {
+  padding-right: 15px;
+  max-width: 500px;
+}
+.right {
+  padding-top: 15%;
+  padding-left: 15px;
+  max-width: 500px;
 }
