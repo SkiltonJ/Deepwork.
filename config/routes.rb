@@ -5,4 +5,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :themes do
+    resources :study_sessions, only: [:create]
+  end
 end
