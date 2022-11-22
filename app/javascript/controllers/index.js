@@ -4,5 +4,8 @@
 
 import { application } from "./application"
 
+import ClockController from "./clock_controller"
+application.register("clock", ClockController)
+
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
