@@ -1,5 +1,5 @@
 class Theme < ApplicationRecord
-  has_many :study_sessions, dependant: :destroy
+  has_many :study_sessions, dependent: :destroy
   belongs_to :user
 
   validates :study_duration, presence: true
