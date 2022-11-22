@@ -1,0 +1,176 @@
+// -------------------animation on index page
+
+.background {
+  height: 100vh;
+  background: url(https://i.ytimg.com/vi/Z0w27AE8dOg/maxresdefault.jpg);
+  background-size: cover;
+  overflow-y: hidden;
+}
+
+// snow animation lol
+
+// makes the snowflakes go down the screen
+@keyframes snowflakes-fall{
+  0%{
+    top:-10%
+  }
+  100%{
+    top:100%
+  }
+}
+
+// shakes them mfers up
+@keyframes snowflakes-shake{
+  0%{
+    transform:translateX(0px)
+  }
+  50%{transform:translateX(40px)
+  }
+  100%{transform:translateX(0px)
+  }
+}
+
+// defines snowflake properties
+.snowflake{
+  color: #b7b9cc;
+  font-size: .8rem;
+  position:fixed;
+  top:-10%;
+  z-index:9999;
+  animation-name:snowflakes-fall,snowflakes-shake;
+  animation-duration:10s,3s;
+  animation-timing-function:linear,ease-in-out;
+  animation-iteration-count:infinite,infinite;
+  animation-play-state:running,running
+}
+// Different snowflake timings
+.snowflake:nth-of-type(0){
+  left:2%;
+  animation-delay:0s,0s
+}
+.snowflake:nth-of-type(1){
+  left:70%;
+  animation-delay:1.5s,1s
+}
+.snowflake:nth-of-type(2){
+  left:20%;
+  animation-delay:2s,.5s
+}
+.snowflake:nth-of-type(3){
+  left:50%;
+  animation-delay:2.2s,.5s
+}
+.snowflake:nth-of-type(4){
+  left:15%;
+  animation-delay:4s,.5s
+}
+.snowflake:nth-of-type(5){
+  left:90%;
+  animation-delay:5s,.5s
+}
+.snowflake:nth-of-type(6){
+  left:70%;
+  animation-delay:4.5s,.5s
+}
+.snowflake:nth-of-type(7){
+  left:40%;
+  animation-delay:7s,.5s
+}
+.snowflake:nth-of-type(8){
+  left:20%;
+  animation-delay:8s,.5s
+}
+.snowflake:nth-of-type(9){
+  left:80%;
+  animation-delay:0s,.5s
+}
+
+
+// ---------------------------------
+// clock animation
+.clock-container {
+  display: flex;
+  justify-content: flex-end;
+  padding: 15px;
+}
+// clock box design with its background shit
+.clock {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(clock.png);
+  background-size: cover;
+  background-color: rgba(39, 39, 47, 0.941);
+  border: 4px solid rgba(159, 159, 159, 0.919);
+  border-radius: 50%;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+              inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+              0 -15px 15px rgba(0, 0, 0, 0.3),
+              inset 0 -15px 15px rgba(0, 0, 0, 0.3);
+}
+// the dot in the middle of the clock (look up :before)
+.clock::before {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+// just positioning the hour, min, second hand
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+// making it so they stick past the middle a bit
+.clock .hour, .hr {
+  width: 130px;
+  height: 130px;
+}
+.clock .min, .mn {
+  width: 160px;
+  height: 160px;
+}
+.clock .sec, .sc {
+  width: 200px;
+  height: 180px;
+}
+// positoning? also the border radius at the end
+.hr, .mn, .sc {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  border-radius: 50%;
+}
+// actual styling of the line itslef to make it longer or shorter
+.hr::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 75px;
+  background-color: rgb(205, 205, 205);
+  z-index: 10;
+  border-radius: 6px 6px 0 0;
+}
+.mn::before {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: rgb(172, 172, 172);
+  z-index: 11;
+  border-radius: 6px 6px 0 0;
+}
+.sc::before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 110px;
+  background-color: rgb(172, 172, 172);
+  z-index: 12;
+  border-radius: 6px 6px 0 0;
+}
