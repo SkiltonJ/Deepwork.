@@ -1,0 +1,136 @@
+
+
+//-----------SESSION DISPLAY CARDS--------------
+// container for cards
+.small-container {
+  height: 275px;
+  width: 360px;
+  border: 1px solid $light-blue;
+  display: flex;
+  justify-content: center;
+  margin: 15px;
+  position: relative;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: .3s;
+  &:hover #card-1 {
+    transform: translate(0%, 0);
+    transform: rotate(-5deg);
+    transition: .2s;
+  }
+  &:hover #card-2 {
+    transform: translate(50%, 5%) rotate(-10deg);
+    transition: .30s;
+  }
+  &:hover #card-3 {
+    transform: translate(90%, 5%) rotate(-15deg);
+    transition: .45s;
+
+  }
+  &:hover #card-4 {
+    transform: translate(120%, 5%) rotate(-20deg);
+    transition: .60s;
+  }
+}
+.title-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  height: 40px;
+  width: 150px;
+  background-color: $gold;
+  border-radius: 25px;
+  h3 {
+    font-family: $satoshi; //interesting font may change sometime soon
+    margin-bottom: 5px;
+  }
+
+}
+.template-card {
+  position: absolute;
+  left: 30px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 125px;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: $light-blue;
+  transition: .3s;
+  transform-origin: center 120%;
+  p {
+    margin: 0 auto;
+  }
+  &:active {
+    transform: scaleX(5%);
+    z-index: 10000;
+  }
+}
+.template-card-2 {
+  position: absolute;
+  z-index: 9;
+  left: 65px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 125px;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: $dark-blue;
+  transition: .6s;
+  transform-origin: center 120%;
+  p {
+    margin: 0 auto;
+  }
+  &:active {
+    transform: scaleX(5%);
+    z-index: 10000;
+  }
+}
+.template-card-3 {
+  position: absolute;
+  z-index: 8;
+  left: 95px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 125px;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: $dark-grey;
+  transition: .5s;
+  transform-origin: center 120%;
+  p {
+    margin: 0 auto;
+  }
+  &:active {
+    transform: scaleX(5%);
+    z-index: 10000;
+  }
+}
+.template-card-4 {
+  position: absolute;
+  z-index: 7;
+  left: 125px;
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 125px;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-color: $gold;
+  transition: .35s;
+  transform-origin: center 120%;
+  p {
+    margin: 0 auto;
+  }
+  &:active {
+    transform: scaleX(5%);
+    z-index: 10000;
+  }
+}
