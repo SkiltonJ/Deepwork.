@@ -59,7 +59,7 @@
 
 // landing button
 .cta {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 .land-button {
   text-decoration: none;
@@ -68,17 +68,21 @@
   border: 1px solid white;
   border-radius: 5px;
   font-family: $zodiak;
-  font-size: 18px;
+  font-size: 26px;
+  background-color: $light-gray;
+  color: $navy-blue;
   &:hover {
     color: $navy-blue;
   }
 }
 
-// white section
+//--------- white section ------------
 .explain-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .how-it-works {
   margin-top: 50px;
@@ -90,15 +94,11 @@
   }
 }
 .columns {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 4em;
-  align-content: center;
-  justify-content: space-between;
-  margin: 0 auto;
-  max-width: 1100px;
-  margin-bottom: 50px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  width: 100%;
+  gap: 25px;
   h4 {
     font-size: 24px;
     font-family: $satoshi;
@@ -110,12 +110,6 @@
     font-weight: 500;
   }
 }
-.left {
-  padding-right: 15px;
-  max-width: 500px;
-}
 .right {
   padding-top: 15%;
-  padding-left: 15px;
-  max-width: 500px;
 }
