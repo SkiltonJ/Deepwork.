@@ -7,8 +7,11 @@ import { application } from "./application"
 import ClockController from "./clock_controller"
 application.register("clock", ClockController)
 
-import FlipdownController from "./flipdown_controller"
-application.register("flipdown", FlipdownController)
+import CountdownTimer2Controller from "./countdown_timer_2_controller"
+application.register("countdown-timer-2", CountdownTimer2Controller)
+
+import CountdownTimerController from "./countdown_timer_controller"
+application.register("countdown-timer", CountdownTimerController)
 
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
