@@ -1,0 +1,26 @@
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  box-shadow: 1px 1px 8px $dark-grey;
+  border-radius: 10px;
+  padding: 30px;
+  background-color: $white;
+  h2 {
+    color: #040278;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+    background-color: $white;
+    border-bottom: solid $light-grey;
+  }
+
+  a {
+    text-decoration: none;
+  }
+}
+
+.form-actions {
+  text-align: center;
+}
