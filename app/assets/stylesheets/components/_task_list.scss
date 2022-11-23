@@ -1,10 +1,11 @@
 .task-list {
   font-family: 'Ranade', sans-serif;
+  width: 30vw;
   color: #1C3B5A;
   background-color: $white;
   box-shadow: 1px 1px 8px $dark-grey;
   width: 350px;
-  height: auto;
+  height: 25vw;
   padding: 10px;
   padding-top: 20px;
   display: flex;
@@ -12,6 +13,7 @@
   align-items: center;
   margin: 5px;
   border-radius: 10px;
+  overflow-y: scroll;
 }
 
 .task-box {
