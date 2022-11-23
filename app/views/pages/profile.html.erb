@@ -1,2 +1,7 @@
+  <% if user_signed_in? %>
+  <%= render "shared/navbar_logged_in" %>
+  <% else %>
+  <%= render "shared/navbar_logged_out" %>
+  <% end %>
 <%= render "components/stats_card" %>
 <%= render "components/primary_button" %>
