@@ -1,12 +1,48 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.navbar {
+  background-color:  #1C3B5A;
+  height: 163px;
+  width: 100%;
+  position: absolute;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.logo {
+position: absolute;
+width: 108px;
+height: 91px;
+left: 73px;
+top: 47px;
+mix-blend-mode: normal;
+border-radius: 25px;
+
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.logo-header {
+  position: absolute;
+width: 131px;
+height: 30px;
+left: 83px;
+top: 17px;
+
+font-family: 'Ubuntu';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 18px;
+
+color: #FFFFFF;
+}
+
+.icon{
+  color: #FFFFFF;
+  height: 200px;
+  width: 200px;
+
+}
+
+.navbar-icons {
+position: absolute;
+
+left: 1188px;
+top: 66px;
+
 }
