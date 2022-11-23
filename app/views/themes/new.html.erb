@@ -1,0 +1,28 @@
+<div class="theme-form-container">
+  <div class="form-header">
+    <%= simple_form_for @theme do |f| %>
+      <%= f.input :name %>
+      <%= f.input :study_duration %>
+      <%= f.input :break_duration %>
+      <%= f.input :block_amount %>
+      <%= f.input :background %>
+      <%= f.input :music %>
+      <div class="text-center">
+        <%= f.button :submit, "Create theme", class:"primary-button w-75 mb-3" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+ <%# create_table "themes", force: :cascade do |t|
+    t.integer "study_duration"
+    t.integer "block_amount"
+    t.integer "break_duration"
+    t.string "background"
+    t.string "music"
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_themes_on_user_id"
+  end %>
