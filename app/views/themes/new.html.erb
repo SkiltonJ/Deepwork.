@@ -13,16 +13,3 @@
     <% end %>
   </div>
 </div>
-
- <%# create_table "themes", force: :cascade do |t|
-    t.integer "study_duration"
-    t.integer "block_amount"
-    t.integer "break_duration"
-    t.string "background"
-    t.string "music"
-    t.string "name"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_themes_on_user_id"
-  end %>
