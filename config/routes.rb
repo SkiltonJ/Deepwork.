@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   resources :themes do
     resources :study_sessions, only: [:create]
   end
+
+  resources :study_sessions, only: [:show]
 end
