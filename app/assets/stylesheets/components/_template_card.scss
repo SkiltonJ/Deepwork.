@@ -5,7 +5,8 @@
 .small-container {
   height: 275px;
   width: 360px;
-  border: 1px solid $light-blue;
+  // border-right: 1px solid $dark-grey;
+  // border-bottom: 1px solid $dark-grey;
   display: flex;
   justify-content: center;
   margin: 15px;
@@ -42,7 +43,7 @@
   margin-top: 20px;
   height: 40px;
   width: 150px;
-  background-color: $gold;
+  background-color: $cyan;
   border-radius: 25px;
   h3 {
     font-family: $satoshi; //interesting font may change sometime soon
@@ -60,7 +61,7 @@
   height: 125px;
   border-radius: 25px;
   margin-top: 20px;
-  background-color: $light-blue;
+  background-color: $navy-blue;
   transition: .3s;
   transform-origin: center 120%;
   p {
@@ -123,7 +124,7 @@
   height: 125px;
   border-radius: 25px;
   margin-top: 20px;
-  background-color: $gold;
+  background-color: $cyan;
   transition: .35s;
   transform-origin: center 120%;
   p {

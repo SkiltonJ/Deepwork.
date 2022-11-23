@@ -1,8 +1,58 @@
-<%= render 'components/stats_card' %>
-
-<div>
-  <%= render "shared/template_card" %>
+<%# Landing Nav %>
+<div class="nav-land">
+  <div class="content">
+    <div class="left-nav">
+    </div>
+    <div class="right-nav">
+      <p><%= link_to "sign in", new_user_session_path, class: "gen-link" %></p>
+    </div>
+  </div>
 </div>
-<%= render "shared/task_list" %>
 
-<%= render "components/button" %>
+
+<%# Container content %>
+<section class="hero">
+  <div class="container">
+    <div class="hero-container">
+      <h1>Deepwork.</h1>
+      <p>construct your atmosphere to <span>get shit done.</span></p>
+      <div class="cta">
+        <p><%= link_to "start a session", root_path, class: "land-button" %></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%# About Section %>
+<section class="about">
+  <div class="container">
+    <div class="explain-container">
+      <div class="how-it-works">
+        <h3>How it Works</h3>
+      </div>
+      <div class="columns">
+        <div class="left">
+          <h4><span>1</span> Choose a template for your session</h4>
+          <div class="cards">
+            <%= render "shared/template_card" %>
+          </div>
+        </div>
+        <div class="right">
+          <h4><span>2</span> Select your session intention and timeframe</h4>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="left">
+          <h4><span>3</span> Begin your customized session</h4>
+          <div class="cards">
+
+          </div>
+        </div>
+        <div class="right">
+          <h4><span>4</span> Once complete, see your session stats</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
