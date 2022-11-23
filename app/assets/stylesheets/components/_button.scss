@@ -1,8 +1,8 @@
 .primary-button {
-  background-color: $dark-blue;
+  background-color: $cyan;
   border: 0;
   border-radius: 56px;
-  color: $gold;
+  color: $black;
   display: inline-block;
   font-size: 18px;
   font-family: Zodiak;
@@ -17,6 +17,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin: 4px;
+  overflow: hidden;
 }
 
 .primary-button:before {
@@ -36,6 +37,7 @@
 .primary-button:hover {
   box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
   transform: scale(1.05);
+  background-color: $cyan;
 }
 
 @media (min-width: 768px) {
@@ -45,14 +47,15 @@
 }
 
 .secondary-button {
-  background-color: $light-blue;
+  background-color: $black;
   border: 0;
   border-radius: 56px;
-  color: $gold;
+  color: $white;
   display: inline-block;
   font-size: 18px;
-  font-family: Zodiak;
-  font-weight: 600;
+  font-family: Renade;
+  font-weight: 500;
+  letter-spacing: 0.4px;
   outline: 0;
   padding: 16px 21px;
   position: relative;
@@ -63,6 +66,7 @@
   -webkit-user-select: none;
   touch-action: manipulation;
   margin: 4px;
+  overflow: hidden;
 }
 
 .secondary-button:before {

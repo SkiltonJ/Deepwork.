@@ -1,5 +1,5 @@
 
-// nav-bar settings
+
 
 .nav-land {
   display: flex;
@@ -26,7 +26,6 @@
     transition: .3s;
   }
 }
-
 
 // hero section
 .hero {
@@ -61,7 +60,7 @@
 
 // landing button
 .cta {
-  margin-top: 35px;
+  margin-top: 60px;
 }
 .land-button {
   text-decoration: none;
@@ -70,17 +69,21 @@
   border: 1px solid white;
   border-radius: 5px;
   font-family: $zodiak;
-  font-size: 18px;
+  font-size: 26px;
+  background-color: $light-gray;
+  color: $navy-blue;
   &:hover {
     color: $navy-blue;
   }
 }
 
-// white section
+//--------- white section ------------
 .explain-container {
   display: flex;
   align-items: center;
   flex-direction: column;
+  max-width: 1100px;
+  margin: 0 auto;
 }
 .how-it-works {
   margin-top: 50px;
@@ -92,15 +95,11 @@
   }
 }
 .columns {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 2em;
-  align-content: center;
-  justify-content: space-between;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   width: 100%;
-  margin-bottom: 50px;
-  text-align: center;
+  gap: 25px;
   h4 {
     font-size: 24px;
     font-family: $satoshi;
@@ -112,21 +111,7 @@
     font-weight: 500;
   }
 }
-.left {
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-right: 15px;
-  max-width: 500px;
-}
+
 .right {
-  display: flex;
-  align-content: flex-start;
-  flex-direction: column;
-  align-items: flex-start;
   padding-top: 15%;
-  padding-left: 15px;
-  max-width: 500px;
-  width: 100%;
 }
