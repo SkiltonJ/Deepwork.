@@ -141,8 +141,8 @@
 // ----------------------CARDS FOR PROFILE--------------------------
 // container for cards
 .small-container-p {
-  height: 250px;
-  width: 340px;
+  height: 170px;
+  width: 209px;
   display: flex;
   justify-content: center;
   margin: 15px;
@@ -176,9 +176,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 0px;
   height: 30px;
-  width: 130px;
+  width: 100px;
   background-color: $cyan;
   border-radius: 25px;
   h3 {
@@ -190,12 +190,12 @@
 }
 .template-card-p {
   position: absolute;
-  left: 30px;
+  left: 0px;
   z-index: 20;
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 125px;
+  width: 120px;
+  height: 80px;
   border-radius: 25px;
   margin-top: 20px;
   background-color: $navy-blue;
@@ -212,11 +212,11 @@
 .template-card-2-p {
   position: absolute;
   z-index: 9;
-  left: 65px;
+  left: 30px;
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 125px;
+  width: 120px;
+  height: 80px;
   border-radius: 25px;
   margin-top: 20px;
   background-color: $dark-blue;
@@ -233,11 +233,11 @@
 .template-card-3-p {
   position: absolute;
   z-index: 8;
-  left: 95px;
+  left: 60px;
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 125px;
+  width: 120px;
+  height: 80px;
   border-radius: 25px;
   margin-top: 20px;
   background-color: $dark-grey;
@@ -254,11 +254,11 @@
 .template-card-4-p {
   position: absolute;
   z-index: 7;
-  left: 125px;
+  left: 90px;
   display: flex;
   align-items: center;
-  width: 200px;
-  height: 125px;
+  width: 120px;
+  height: 80px;
   border-radius: 25px;
   margin-top: 20px;
   background-color: $cyan;
