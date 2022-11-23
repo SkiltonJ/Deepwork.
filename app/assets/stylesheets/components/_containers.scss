@@ -2,14 +2,14 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  align-content: space-between;
-  justify-content: space-between;
+
 }
 
 .profile-left {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .profile-right {
@@ -17,6 +17,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
 }
 
 .button-flex {
@@ -36,18 +37,4 @@
 .landing-card-sm-container {
   margin: 0 auto;
   margin-top: 40px;
-}
-
-.landing-stats-container-sm {
-  width: 40vw;
-  padding: 2px;
-  box-shadow: 1px 1px 8px $dark-grey;
-  border-radius: 25px;
-  overflow: hidden;
-  margin: 6px;
-  img {
-    height: 60px;
-    width: 60px;
-    border-radius: 25px;
-  }
 }
