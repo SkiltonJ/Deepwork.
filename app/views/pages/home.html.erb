@@ -1,21 +1,22 @@
 <%# Landing Nav %>
-<div class="nav-land">
-  <div class="content">
-    <div class="left-nav">
+<section class="hero">
+  <div class="nav-land">
+    <div class="content">
+      <div class="left-nav">
+      </div>
+      <div class="right-nav">
+      <% if user_signed_in? %>
+        <p><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gen-link" %></p>
+      <% else %>
+        <p><%= link_to "sign in", new_user_session_path, class: "gen-link" %></p>
+      <% end %>
+      </div>
     </div>
-    <div class="right-nav">
-    <% if user_signed_in? %>
-      <p><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gen-link" %></p>
-    <% else %>
-      <p><%= link_to "sign in", new_user_session_path, class: "gen-link" %></p>
-    <% end %>
-    </div>
-  </div>
-</div>
+   </div>
 
 
 <%# Container content %>
-<section class="hero">
+
   <div class="container">
     <div class="hero-container">
       <h1>Deepwork.</h1>
@@ -51,8 +52,19 @@
         </div>
         <div class="right">
           <h4><span>4</span> Once complete, see your session stats</h4>
+          <div class="cards">
+            <%= render "components/stats_card" %>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<%# Footer Build %>
+<div class="foot-container">
+  <div class="foot-left">
+  </div>
+  <div class="foot-right">
+  </div>
+</div>
