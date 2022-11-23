@@ -2,8 +2,7 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-  align-content: space-between;
-  justify-content: space-between;
+
 }
 
 .profile-left {
@@ -18,6 +17,7 @@
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+
 }
 
 .button-flex {
