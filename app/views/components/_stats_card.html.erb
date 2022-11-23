@@ -1,0 +1,64 @@
+<div class="hub-container">
+  <div class="stats-container">
+    <nav>
+      <div class="nav nav-tabs" id="nav-tab" role="tablist">
+        <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Stats</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Message</button>
+        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Achievements</button>
+        <%# <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button> %>
+      </div>
+    </nav>
+    <div class="tab-content" id="nav-tabContent">
+      <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+        <div class="achievements-header">
+          <h3>Achievements</h3>
+        </div>
+        <div class="row">
+          <div class="stats-box col-9">
+            <div class="stats-bar mb-3">
+              <p class="progress-text">Minutes focussed</p>
+              <div class="progress">
+                <div class="progress-fill-1">
+                  <p class="progress-bar-text">69000 minutes focussed</p>
+                </div>
+              </div>
+              <p class="progress-text">69%</p>
+            </div>
+            <div class="stats-bar mb-3">
+              <p class="progress-text">Study blocks completed</p>
+              <div class="progress">
+                <div class="progress-fill-2">
+                  <p class="progress-text">69 completed</p>
+                </div>
+              </div>
+              <p class="progress-bar-text">69%</p>
+            </div>
+            <div class="stats-bar mb-3">
+              <p class="progress-text">Deepwork days completed</p>
+                <div class="progress">
+                  <div class="progress-fill-3">
+                    <p class="progress-text">69</p>
+                  </div>
+                </div>
+                <p class="progress-bar-text">69%</p>
+            </div>
+          </div>
+          <div class="col-3">
+            <div class="photo">
+              <p>Level 10</p>
+              <%= image_tag "vitruvian.jpg" %>
+            </div>
+            <div class="photo">
+              <p>Level 6</p>
+              <%= image_tag "marcus.jpg" %>
+            </div>
+            <div class="photo">
+              <p>Level 9</p>
+              <%= image_tag "Albert-Einstein.jpg" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
