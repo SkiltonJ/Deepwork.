@@ -1,5 +1,5 @@
 <%# sessions container %>
-
+<% if action_name == "home" %>
 <div class="small-container">
   <div class="title-content">
     <h3>sessions</h3>
@@ -19,3 +19,24 @@
     </div>
   </div>
 </div>
+<% else %>
+<div class="small-container-p">
+  <div class="title-content-p">
+    <h3>sessions</h3>
+  </div>
+  <div class="content-container-p">
+    <div class="template-card-p" id="card-1">
+      <p> </p>
+    </div>
+    <div class="template-card-2-p" id="card-2">
+      <p></p>
+    </div>
+    <div class="template-card-3-p" id="card-3">
+      <p></p>
+    </div>
+    <div class="template-card-4-p" id="card-4">
+      <p></p>
+    </div>
+  </div>
+</div>
+<% end %>
