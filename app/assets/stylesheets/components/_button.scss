@@ -19,6 +19,29 @@
   margin: 4px;
   overflow: hidden;
 }
+.primary-button-profile {
+  background-color: $cyan;
+  border: 0;
+  border-radius: 56px;
+  color: $black;
+  display: inline-block;
+  font-size: 18px;
+  font-family: Zodiak;
+  font-weight: 600;
+  outline: 0;
+  padding: 16px 21px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: all .3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  margin: 4px;
+  overflow: hidden;
+  width: 350px;
+  margin-bottom: 18px;
+}
 
 .primary-button:before {
   background-color: initial;
