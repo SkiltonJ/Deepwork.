@@ -25,6 +25,7 @@
   justify-content: space-between;
 }
 
+
 .theme-form-container {
   margin: 24px auto auto auto;
   padding: 30px;
@@ -34,7 +35,22 @@
   box-shadow: 1px 1px 8px $dark-grey;
 }
 
+
+// Stats card alternat containers for homepage
 .landing-card-sm-container {
   margin: 0 auto;
   margin-top: 40px;
+}
+.landing-stats-container-sm {
+  width: 35vw;
+  padding: 2px;
+  box-shadow: 1px 1px 8px $dark-grey;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 6px;
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: 25px;
+  }
 }
