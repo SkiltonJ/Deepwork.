@@ -1,18 +1,17 @@
 <%# Landing Nav %>
 <section class="hero">
-  <div class="nav-land">
-    <div class="content">
-      <div class="left-nav">
-      </div>
-      <div class="right-nav">
-      <% if user_signed_in? %>
-        <p><%= link_to "log out", destroy_user_session_path, data: {turbo_method: :delete}, class: "gen-link" %></p>
-      <% else %>
-        <p><%= link_to "sign in", new_user_session_path, class: "gen-link" %></p>
-      <% end %>
-      </div>
+  <div class="navbar">
+    <%= link_to "Deepwork.", root_path, class: "navbar-brand" %>
+    <div class="header">
+      <%= link_to "Cunt", root_path, class: "navbar-header-landing" %>
+      <%= link_to "How it Works", root_path, class: "navbar-header-landing" %>
+      <%= link_to "Ressources", root_path, class: "navbar-header-landing" %>
     </div>
-   </div>
+    <div class="login">
+      <%= link_to "Login", new_user_session_path, class: "nav-login-landing" %>
+      <%= link_to "Sign up", new_user_session_path, class: "nav-sign-up-landing" %>
+    </div>
+</div>
 
 
 <%# Container content %>

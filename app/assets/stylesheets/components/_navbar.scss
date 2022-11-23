@@ -11,7 +11,37 @@
     color: white;
     transition: .3s;
   }
+}
 
+.nav-dropdown {
+  background-color: #F4F4F4;
+  border: none;
+  text-align: center;
+}
+
+.nav-profile {
+  margin-right: 125px;
+  margin-left: 125px;
+}
+
+
+.navbar-header {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #232D34;
+  font-family: $satoshi;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  &:hover {
+    color: white;
+    transition: .3s;
+    background-color: #F4F4F4;
+  }
 }
 
 .login {
@@ -40,9 +70,11 @@
     padding-right: 42px;
     padding-top: 14px;
     padding-bottom: 14px;
+    background-color: $dark-blue;
 
   }
 }
+
 
 .nav-login {
   font-size: 15px;
@@ -70,5 +102,84 @@
 }
 
 .login {
-  margin-right: 100px;
+  margin-right: 50px;
+}
+
+.navbar-lewagon {
+  justify-content: space-between;
+  background: white;
+}
+
+.navbar-lewagon .navbar-collapse {
+  flex-grow: 0;
+}
+
+.navbar-lewagon .navbar-brand img {
+  width: 40px;
+}
+
+.nav-sign-up-landing {
+  font-weight: 500;
+  font-size: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #232D34;
+  font-family: $satoshi;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 25px;
+  &:hover {
+    transition: .3s;
+    font-size: 17px;
+    border-radius: 25px;
+    background-color: white;
+    color: #232D34
+  }
+
+}
+.nav-login-landing {
+  font-size: 15px;
+  font-weight: 600;
+  background-color: none;
+  padding-left: 46px;
+  padding-right: 46px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #232D34;
+  font-family: $satoshi;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-radius: 25px;
+  &:hover {
+    color: white;
+    transition: .3s;
+    font-size: 17px;
+    background-color: #81D6E9;
+    border-radius: 25px;
+  }
+
+}
+.navbar-header-landing {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: #232D34;
+  font-family: $satoshi;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  &:hover {
+    color: white;
+    transition: .3s;
+    background-color: none;
+  }
 }

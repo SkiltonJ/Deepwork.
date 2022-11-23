@@ -1,0 +1,21 @@
+<div class="navbar">
+    <%= link_to "Deepwork.", root_path, class: "navbar-brand" %>
+    <div class="header">
+      <%= link_to "Statistics", root_path, class: "navbar-header" %>
+      <%= link_to "Sessions", root_path, class: "navbar-header" %>
+      <%= link_to "Ressources", root_path, class: "navbar-header" %>
+    </div>
+    <div class="nav-item dropdown nav-profile">
+      <div class="img-container">
+      </div>
+      <%= image_tag "profile.png", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+      <div class="dropdown-menu dropdown-menu-end nav-dropdown" aria-labelledby="navbarDropdown">
+        <%= link_to "Notifications", "#", class: "dropdown-item navbar-header" %>
+        <%= link_to "Messages", "#", class: "dropdown-item navbar-header" %>
+        <%= link_to "Sessions", "#", class: "dropdown-item navbar-header" %>
+        <%= link_to "Profile", "#", class: "dropdown-item navbar-header" %>
+        <%= link_to "Settings", "#", class: "dropdown-item navbar-header" %>
+        <%= link_to "Log out", "#", class: "dropdown-item navbar-header", data: {turbo_method: :delete} %>
+      </div>
+    </div>
+</div>

@@ -1,7 +1,9 @@
 
-<div>
-  <%= render "shared/navbar" %>
-</div>
+  <% if user_signed_in? %>
+  <%= render "shared/navbar_logged_in" %>
+  <% else %>
+  <%= render "shared/navbar_logged_out" %>
+  <% end %>
 <div class="hub-container">
   <div class="profile-left">
     <div>
@@ -21,3 +23,4 @@
     </div>
   </div>
 </div>
+
