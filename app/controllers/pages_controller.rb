@@ -5,5 +5,6 @@ class PagesController < ApplicationController
   end
 
   def profile
+  # Build to be able to access all user data
   end
 end
