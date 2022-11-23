@@ -2,14 +2,14 @@
   max-width: 1400px;
   margin: 0 auto;
   display: flex;
-
+  justify-content: space-between;
 }
 
 .profile-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .profile-right {
