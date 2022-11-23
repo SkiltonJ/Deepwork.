@@ -1,7 +1,10 @@
 .stats-container {
   width: 50vw;
   padding: 2px;
-
+  box-shadow: 1px 1px 8px $dark-grey;
+  border-radius: 25px;
+  overflow: hidden;
+  margin: 6px;
   img {
     height: 60px;
     width: 60px;
@@ -12,7 +15,7 @@
 .progress {
   width: 100%;
   height: 20px;
-  background: $white;
+  background: $light-grey;
   border-radius: 25px;
 }
 
@@ -38,34 +41,30 @@
 }
 
 .nav-link {
-  color: $gold;
+  color: $smoke-grey;
   border: none;
 
   &:hover {
-    color: $light-grey;
+    color: $black;
+    background-color: $light-grey;
     border: none;
   }
 }
 
 .tab-pane {
-  background-color: $light-grey;
-  border-radius: 25px;
+  background-color: white;
   padding-left: 36px;
   padding-top: 16px;
 }
 
 .nav-tabs {
-  background-color: $dark-blue;
-  border-radius: 25px;
+  background-color: white;
   overflow: hidden;
   width: 100%;
 
     .active {
-    color: $light-grey !important;
-    background-color: $dark-blue !important;
-    border: none;
-  }
-    &:hover {
+    color: $black !important;
+    background-color: $light-grey !important;
     border: none;
   }
 }
