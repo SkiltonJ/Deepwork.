@@ -1,4 +1,25 @@
 .hub-container {
-  width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
+}
+
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.button-flex {
+  display: flex;
+  justify-content: space-between;
 }
