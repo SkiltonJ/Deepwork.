@@ -1,8 +1,8 @@
 .task-list {
   font-family: 'Ranade', sans-serif;
   color: #1C3B5A;
-  background-color: #EBEBEB ;
-  box-shadow: 2px 2px 5px $lighter-blue;
+  background-color: #4c8abc0f;
+  box-shadow: 1px 1px 5px $lighter-blue;
   width: 350px;
   height: auto;
   padding: 10px;
@@ -25,8 +25,8 @@
 .task-heading {
   box-shadow: 1px 1px 5px $lighter-blue;
   align-items: center;
-  background-color: $salmon;
-  border-radius: 25px;
+  background-color: #4c8abc0f;
+  border-radius: 10px;
   padding: 10px;
   padding-left: 25px;
   padding-right: 25px;
@@ -52,8 +52,8 @@
 .task-items li {
   padding: 2px;
   margin-bottom: 15px;
-  background-color: #74808024;
-  border-radius: 25px;
+  background-color: #4c8abc0f;
+  border-radius: 10px;
   width: 250px;
   box-shadow: 1px 1px 5px $lighter-blue;
   // align-items: flex-start;
