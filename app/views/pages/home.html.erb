@@ -23,26 +23,28 @@
 
 
 <%# Container content %>
-
   <div class="container">
     <div class="hero-container">
-      <h1>Deepwork.</h1>
-      <p>construct your atmosphere to <span>get shit done.</span></p>
-      <div class="cta">
-        <%= link_to quickstart_path do  %>
-          <%= render "components/secondary_button" %>
-        <% end %>
-      </div>
+      <%# <h1>Deepwork.</h1> %>
+      <h1>Get shit done.</h1>
+        <p><span>Construct your atmosphere</span></p>
+        <div class="cta">
+          <%= link_to quickstart_path do  %>
+            <%= render "components/secondary_button" %>
+          <% end %>
+        </div>
     </div>
   </div>
 </section>
+
+
 
 <%# About Section %>
 <section class="about">
   <div class="container">
     <div class="explain-container">
       <div class="how-it-works">
-        <h3>How it Works</h3>
+        <h3>How to use Deepwork.</h3>
       </div>
       <div class="columns">
         <div class="left">
@@ -53,6 +55,9 @@
         </div>
         <div class="right">
           <h4><span>2</span> Select your session intention and timeframe</h4>
+          <div class="timer">
+            <%= render "components/countdown_timer" %>
+          </div>
         </div>
       </div>
       <div class="columns">
