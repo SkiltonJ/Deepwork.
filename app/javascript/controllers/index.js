@@ -7,8 +7,8 @@ import { application } from "./application"
 import ClockController from "./clock_controller"
 application.register("clock", ClockController)
 
-import FlipdownController from "./flipdown_controller"
-application.register("flipdown", FlipdownController)
-
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
+
+import XpController from "./xp_controller"
+application.register("xp", XpController)
