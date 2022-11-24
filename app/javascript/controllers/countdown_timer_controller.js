@@ -28,6 +28,9 @@ export default class extends Controller {
 	// format countdown string + set tag value
 	countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
 }
+if (time == 0) {
+  countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + 'seconds' + "</span>";
+}
 
 function pad(n) {
 	return (n < 10 ? '0' : '') + n;
