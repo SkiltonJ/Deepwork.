@@ -9,5 +9,5 @@ Rails.application.routes.draw do
     resources :study_sessions, only: [:create]
   end
 
-  resources :study_sessions, only: [:show]
+  resources :study_sessions, only: [:index, :show]
 end
