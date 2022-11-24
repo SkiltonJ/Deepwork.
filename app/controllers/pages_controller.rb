@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   def profile
   # Build to be able to access all user data
   end
+
+  def quickstart
+  end
 end
 
 
