@@ -8,4 +8,12 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  # def current_level
+  #   if ?? < 1000
+  #     1
+  # end
 end
+
+
+# user stats method to get level and minutes??
