@@ -20,15 +20,12 @@
 }
 
 .progress-fill-1 {
-  width: 69%;
   height: 100%;
-  background-color: $cyan;
+  transition: .6s;
 }
 
 .progress-fill-2 {
-  width: 23%;
   height: 100%;
-  background-color: $cyan;
 }
 .progress-fill-3 {
   width: 69%;

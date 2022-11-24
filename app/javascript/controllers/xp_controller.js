@@ -5,44 +5,35 @@ import { end } from "@popperjs/core";
 export default class extends Controller {
   connect() {
 
+    let level = 1;
     let xp = 0;
     const session = 10;
     const sesh = document.querySelector(".sesh");
     const progress = document.getElementById("progress");
 
-    sesh.addEventListener('click', () => {
+    sesh.addEventListener('click', updateCounters);
+
+    setInterval(function updateCounters(event) {
+      let color = progress.style.backgroundColor;
+      let fill = progress.style.width;
       xp = xp + session;
       console.log(xp);
-      const color = progress.style.backgroundColor;
-      const fill = progress.style.width;
-      function xpFill() {
-        if (xp < 100) {
-          console.log("howdy");
-          color = "blue";
-          fill = `${xp.toString()}%`;
-        } else {
-          console.log("You Leveled up!!");
-          fill = "0%";
-        }
-      };
-    });
+      if (xp <= 110) {
+        console.log("howdy");
+        color = "blue";
+        fill = xp;
+        progress.style.backgroundColor = "blue";
+        progress.style.width = `${fill}%`;
+      } else {
+        console.log("You Leveled up!!");
+        progress.style.width = 0%;
+        progress.style.backgroundColor = "blue";
+      }
+    }, 2000);
   }
-}
+// Transition to make the bar load up to a certain % on page load (set interval)
+// Connect the xp to the minutes that are actually studied
+// make the function listen to when the timer is done? or the value that is input into the intention thing?
 
 
-
-// function xpFill() {
-//   sesh.addEventListener('click', () => {
-//     xp = xp + session;
-//     console.log(xp);
-//     const fill = progress.style.width;
-//   })
-//   if (xp < 100) {
-//     console.log("howdy");
-//     fill = "blue";
-//     fill = `${xp.toString()}%`;
-//   } else {
-//     console.log("You Leveled up!!");
-//     fill = "0%";
-//   }
-// };
+// 1. study_sessions.pluck to get total minutes;
