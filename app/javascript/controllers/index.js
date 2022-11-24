@@ -23,3 +23,8 @@ application.register("hello", HelloController)
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
 
+import { Application } from '@hotwired/stimulus'
+import Dropdown from 'stimulus-dropdown'
+
+const application = Application.start()
+application.register('dropdown', Dropdown)

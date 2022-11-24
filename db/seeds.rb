@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+
+# puts "Detroying topics"
+# Topic.destroy_all
+
+# @topics = [
+#   "History",
+#   "Mathematics",
+#   "Physics",
+#   "Biology",
+#   "Spanish"
+# ]
+
+# 5.times do
+#   topic = Topic.new(
+#   name: @topics.sample
+# )
+#   topic.save
+#   puts "Created #{topic.name}"
+# end
