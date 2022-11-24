@@ -6,6 +6,8 @@ class PagesController < ApplicationController
 
   def profile
   # Build to be able to access all user data
+    @topics = Topic.all
+    @topic = Topic.new
   end
 
   def quickstart

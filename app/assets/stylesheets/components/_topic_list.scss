@@ -1,66 +1,73 @@
-.task-list {
+.topic-container {
   font-family: 'Ranade', sans-serif;
-  height: 510px;
+  height: 406px;
   color: #1C3B5A;
   background-color: $white;
   box-shadow: 1px 1px 8px $dark-grey;
+  // width: 250px;
   width: 100%;
   padding: 10px;
   padding-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5px;
+  justify-content: center;
+  margin: 10px;
   border-radius: 5px;
+  overflow-y: scroll;
 }
 
-.task-box {
-  font-family: 'Ranade', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.topic-list {
+  height: inherit;
 }
 
-.task-heading {
+.topic-heading {
+  font-size: 26px;
   align-items: center;
-  padding: 10px;
+  padding: 0px;
   padding-left: 25px;
   padding-right: 25px;
   text-align: center;
 }
 
-.task-form {
+.topic-form {
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-.task-items {
+.topic-items {
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   overflow-y: scroll;
 }
-.task-items ul {
-  padding: 15px;
+.topic-items ul {
+  padding: 0px;
   list-style: none;
+  text-align: center;
 }
 
-.task-items li {
+.topic-items li {
   padding: 2px;
   margin-bottom: 15px;
   background-color: $white;
   border-radius: 10px;
   width: 250px;
+  list-style: none;
   // box-shadow: 1px 1px 8px $dark-grey;
   // align-items: flex-start;
 }
 
-.task-items li:hover {
+.topic-items li:hover {
   background-color: $dark-grey;
 }
 
 
-.task-list input {
+.topic-container input {
   margin: 10px;
   box-shadow: 1px 1px 2px $dark-grey;
   border: none;
@@ -74,11 +81,11 @@
   width: auto;
 }
 
-.task-button {
+.topic-button {
   border-radius: 5px;
   border: none;
   background-color: rgb(26, 223, 127);
-  padding: 5px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
 }

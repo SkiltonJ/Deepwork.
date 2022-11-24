@@ -15,3 +15,4 @@ application.register("countdown-timer", CountdownTimerController)
 
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
+
