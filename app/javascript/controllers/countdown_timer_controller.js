@@ -3,6 +3,7 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="countdown-timer"
 export default class extends Controller {
   connect() {
+    console.log("howdy");
   let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${5}`); // Need to be able to interpolate in study_duration / pass as argument
   let hours, minutes, seconds; // variables for time units
 
@@ -26,6 +27,9 @@ export default class extends Controller {
 
 	// format countdown string + set tag value
 	countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+}
+if (time == 0) {
+  countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + 'seconds' + "</span>";
 }
 
 function pad(n) {
