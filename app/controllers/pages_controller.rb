@@ -9,6 +9,9 @@ class PagesController < ApplicationController
     @topics = Topic.all
     @topic = Topic.new
   end
+
+  def quickstart
+  end
 end
 
 

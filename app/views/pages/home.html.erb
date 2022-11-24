@@ -7,34 +7,44 @@
       <%= link_to "How it Works", root_path, class: "navbar-header-landing" %>
       <%= link_to "Ressources", root_path, class: "navbar-header-landing" %>
     </div>
+    <% if user_signed_in? %>
+    <div class="login">
+      <%= link_to "Profile", profile_path, class: "nav-login-landing" %>
+      <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete},
+      class: "dropdown-item nav-sign-up-landing" %>
+    </div>
+    <% else %>
     <div class="login">
       <%= link_to "Login", new_user_session_path, class: "nav-login-landing" %>
-      <%= link_to "Sign up", new_user_session_path, class: "nav-sign-up-landing" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "nav-sign-up-landing" %>
     </div>
+     <% end %>
 </div>
 
 
 <%# Container content %>
-
   <div class="container">
     <div class="hero-container">
-      <h1>Deepwork.</h1>
-      <p>construct your atmosphere to <span>get shit done.</span></p>
-      <div class="cta">
-        <%= link_to study_session_path(:user_id) do  %>
-          <%= render "components/secondary_button" %>
-        <% end %>
-      </div>
+      <%# <h1>Deepwork.</h1> %>
+      <h1>Get shit done.</h1>
+        <p><span>Construct your atmosphere</span></p>
+        <div class="cta">
+          <%= link_to quickstart_path do  %>
+            <%= render "components/secondary_button" %>
+          <% end %>
+        </div>
     </div>
   </div>
 </section>
+
+
 
 <%# About Section %>
 <section class="about">
   <div class="container">
     <div class="explain-container">
       <div class="how-it-works">
-        <h3>How it Works</h3>
+        <h3>How to use Deepwork.</h3>
       </div>
       <div class="columns">
         <div class="left">
@@ -45,6 +55,9 @@
         </div>
         <div class="right">
           <h4><span>2</span> Select your session intention and timeframe</h4>
+          <div class="timer">
+            <%= render "components/countdown_timer", opacity: 0.9 %>
+          </div>
         </div>
       </div>
       <div class="columns">

@@ -25,9 +25,9 @@
   }
 }
 
-// hero section
+// hero section first
 .hero {
-  // background-color: $cyan;
+  background-color: $cyan;
   background-image: url("https://images.unsplash.com/photo-1514454529242-9e4677563e7b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTUxfHxjeWFuJTIwc2t5fGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60");
   background-size: cover;
 }
@@ -40,21 +40,70 @@
   flex-direction: column;
   align-items: center;
   padding-top: 10%;
-  height: 70vh;
+  height: 75vh;
+  width: 70%;
+  margin: auto;
   h1 {
-    font-size: 72px;
+    font-size: 74px;
     margin-bottom: 0;
     font-family: $zodiak;
   }
   p {
     font-family: $satoshi;
-    font-size: 18px;
+    font-size: 22px;
   }
   span {
     color: $navy-blue;
     font-weight: 500;
   }
 }
+
+// // Landing New
+// .hero-2 {
+//   padding: 20px;
+// }
+// .container-h {
+//   border-top:  1px solid $smoke-grey;
+// }
+// .hero-container-d {
+//   max-width: 1100px;
+//   margin: 0 auto;
+//   display: grid;
+//   grid-template-columns: 1fr 1.5fr;
+//   width: 100%;
+//   height: 80vh;
+// }
+// .left-hero {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   border-right: 1px solid $smoke-grey;
+//   height: 90%;
+//   margin-top: 20px;
+//   h1 {
+//     font-size: 38px;
+//     margin-bottom: 0;
+//     font-family: $zodiak;
+//   }
+//       p {
+//     font-family: $satoshi;
+//     font-size: 18px;
+//   }
+//       span {
+//     color: $navy-blue;
+//     font-weight: 500;
+//   }
+// }
+
+// .right-hero {
+//   display: flex;
+//   justify-content: center;
+//   margin: 60px;
+//   background-image: url("https://images.pexels.com/photos/2167395/pexels-photo-2167395.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+//   background-size: cover;
+//   background-position: center;
+//   border-radius: 5px;
+// }
 
 // landing button
 .cta {
@@ -96,6 +145,7 @@
   }
 }
 .columns {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
@@ -114,4 +164,9 @@
 }
 .right {
   padding-top: 15%;
+}
+
+.timer {
+  position: absolute;
+  bottom: 90px;
 }
