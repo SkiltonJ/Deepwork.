@@ -1,5 +1,5 @@
 <%# Landing Nav %>
-<section class="hero">
+<section class="hero-2">
   <div class="navbar">
     <%= link_to "Deepwork.", root_path, class: "navbar-brand" %>
     <div class="header">
@@ -19,23 +19,29 @@
       <%= link_to "Sign up", new_user_registration_path, class: "nav-sign-up-landing" %>
     </div>
      <% end %>
-</div>
+  </div>
+</section>
 
 
-<%# Container content %>
-  <div class="container">
-    <div class="hero-container">
+<section class="hero-2">
+  <div class="container-h">
+    <div class="hero-container-d">
       <%# <h1>Deepwork.</h1> %>
-      <h1>Get shit done.</h1>
+      <div class="left-hero">
+        <h1>Get shit done.</h1>
         <p><span>Construct your atmosphere</span></p>
-        <div class="cta">
-          <%= link_to quickstart_path do  %>
-            <%= render "components/secondary_button" %>
-          <% end %>
+          <div class="cta">
+            <%= link_to quickstart_path do  %>
+              <%= render "components/secondary_button" %>
+            <% end %>
         </div>
+      </div>
+      <div class="right-hero">
+      </div>
     </div>
   </div>
 </section>
+
 
 
 
