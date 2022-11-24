@@ -3,20 +3,20 @@ import { Controller } from "@hotwired/stimulus"
 // Connects to data-controller="countdown-timer"
 export default class extends Controller {
   connect() {
-    var target_date = new Date().getTime() + (1000*3600*1); // set the countdown date
-    var hours, minutes, seconds; // variables for time units
+  let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${5}`); // Need to be able to interpolate in study_duration / pass as argument
+  let hours, minutes, seconds; // variables for time units
 
-    var countdown = document.getElementById("tiles"); // get tag element
+  let countdown = document.getElementById("tiles"); // get tag element
 
-getCountdown();
+  getCountdown();
 
-setInterval(function () { getCountdown(); }, 1000);
+  setInterval(function () { getCountdown(); }, 1000);
 
-function getCountdown(){
+  function getCountdown(){
 
 	// find the amount of "seconds" between now and target
-	var current_date = new Date().getTime();
-	var seconds_left = (target_date - current_date) / 1000;
+	let current_date = (new Date().getTime() / 1000);
+	let seconds_left = (target_date - current_date);
 
 	hours = pad( parseInt(seconds_left / 3600) );
 	seconds_left = seconds_left % 3600;
