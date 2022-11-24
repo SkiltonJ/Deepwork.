@@ -35,6 +35,9 @@ export default class extends Controller {
       if (seconds_left < 0) {
         countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
       }
+      if (url === '/tease') {
+        countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
+      }
     }
 
 
