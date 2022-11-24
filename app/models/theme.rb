@@ -1,6 +1,6 @@
 class Theme < ApplicationRecord
   has_many :study_sessions, dependent: :destroy
-  belongs_to :user
+  belongs_to :user, optional: true
 
   validates :study_duration, presence: true
   validates :block_amount, presence: true
