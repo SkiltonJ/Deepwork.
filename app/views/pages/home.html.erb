@@ -7,10 +7,18 @@
       <%= link_to "How it Works", root_path, class: "navbar-header-landing" %>
       <%= link_to "Ressources", root_path, class: "navbar-header-landing" %>
     </div>
+    <% if user_signed_in? %>
+    <div class="login">
+      <%= link_to "Profile", profile_path, class: "nav-login-landing" %>
+      <%= link_to "Logout", destroy_user_session_path, data: {turbo_method: :delete},
+      class: "dropdown-item nav-sign-up-landing" %>
+    </div>
+    <% else %>
     <div class="login">
       <%= link_to "Login", new_user_session_path, class: "nav-login-landing" %>
-      <%= link_to "Sign up", new_user_session_path, class: "nav-sign-up-landing" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "nav-sign-up-landing" %>
     </div>
+     <% end %>
 </div>
 
 
