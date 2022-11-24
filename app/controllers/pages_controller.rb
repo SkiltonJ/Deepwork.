@@ -10,6 +10,9 @@ class PagesController < ApplicationController
 
   def quickstart
   end
+
+  def tease
+  end
 end
 
 

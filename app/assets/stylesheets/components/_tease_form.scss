@@ -1,0 +1,50 @@
+.tease {
+  margin: 25vh auto auto auto;
+  width: 30vw;
+  // height: 70vh;
+  margin-top: 15vh;
+  box-shadow: 1px 1px 8px $dark-grey;
+  padding: 3em 1em 3em 1em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: $white;
+  color: $black;
+
+  .progress-fill-1 {
+    width: 30%;
+  }
+}
+
+.tease-header {
+  text-align: center;
+  // margin: 1em auto 4em auto;
+
+  h3 {
+    font-family: $zodiak;
+    font-size: 36px;
+  }
+}
+
+.tease-content {
+  padding: 0px 16px;
+}
+
+.tease-buttons {
+  display: flex;
+  justify-content: space-around;
+
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+
+  .secondary-button {
+    background-color: $light-grey;
+  }
+}
+
+.sign-up {
+  box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+}
