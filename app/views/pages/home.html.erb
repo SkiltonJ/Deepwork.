@@ -3,7 +3,7 @@
   <div class="navbar">
     <%= link_to "Deepwork.", root_path, class: "navbar-brand" %>
     <div class="header">
-      <%= link_to "Cunt", root_path, class: "navbar-header-landing" %>
+      <%= link_to "Cunt", profile_path, class: "navbar-header-landing" %>
       <%= link_to "How it Works", root_path, class: "navbar-header-landing" %>
       <%= link_to "Ressources", root_path, class: "navbar-header-landing" %>
     </div>
@@ -21,7 +21,9 @@
       <h1>Deepwork.</h1>
       <p>construct your atmosphere to <span>get shit done.</span></p>
       <div class="cta">
-        <%= render "components/secondary_button" %>
+        <%= link_to study_session_path(:user_id) do  %>
+          <%= render "components/secondary_button" %>
+        <% end %>
       </div>
     </div>
   </div>

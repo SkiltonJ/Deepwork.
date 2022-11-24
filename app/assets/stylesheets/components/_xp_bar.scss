@@ -1,0 +1,28 @@
+
+.bar-holder {
+  max-width: 80vh;
+  display: flex;
+  justify-content: center;
+}
+.container-bar {
+  max-width: 100%;
+  margin: 5px;
+  display: flex;
+  align-items: center;
+}
+.bar {
+  height: 20px;
+  width: 800px;
+  border-radius: 10px;
+  background-color: $light-grey;
+}
+#progress {
+  height: 20px;
+}
+
+// button
+.sesh {
+  background-color: $smoke-grey;
+  color: $white;
+  border-radius: 5px;
+}

@@ -20,9 +20,10 @@
       <%= render "shared/task_list" %>
     </div>
     <div class="button-flex">
-      <%= render "components/primary_button_profile" %>
+      <%= link_to study_session_path(:user_id) do  %>
+        <%= render "components/primary_button_profile" %>
+      <% end %>
     </div>
 
   </div>
 </div>
-
