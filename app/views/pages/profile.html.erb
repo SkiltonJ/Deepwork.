@@ -1,21 +1,24 @@
-
-  <% if user_signed_in? %>
+<% if user_signed_in? %>
   <%= render "shared/navbar_logged_in" %>
-  <% else %>
+<% else %>
   <%= render "shared/navbar_logged_out" %>
-  <% end %>
-<div class="hub-container">
-  <div class="profile-left">
+<% end %>
+
+<div class="profile-page">
+  <div class="profile_left">
+  <div class="profile_quote_div">
+    <p class="profile_quote">Hello <span class="profile_quote_white">Jonathan</span> ; The immature mind hops from one thing to another - the mature mind seeks to follow trough - <span class="profile_quote_white">Marcus Aurelius</span></p>
+  </div>
     <div>
       <%= render "components/stats_card" %>
     </div>
     <div>
       <%= render "shared/template_card" %>
     </div>
-
   </div>
 
-  <div class="profile-right">
+  <div class="profile_right">
+    <%= image_tag "profile_banner.png", class:"profile_banner" %>
     <div>
       <%= render "shared/topic_list" %>
     </div>
@@ -24,6 +27,5 @@
         <%= render "components/primary_button_profile" %>
       <% end %>
     </div>
-
   </div>
 </div>
