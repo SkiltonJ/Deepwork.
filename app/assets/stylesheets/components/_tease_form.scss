@@ -5,6 +5,7 @@
   margin: 0;
   background-position: center;
   background-size: 1440px 820px;
+  position: relative;
 }
 
 .tease {
@@ -56,4 +57,10 @@
 
 .sign-up {
   box-shadow: rgba(255, 255, 255, .2) 0 3px 15px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+}
+
+.spotify-card {
+  position: absolute;
+  top: 28vh;
+  left: 1vw;
 }
