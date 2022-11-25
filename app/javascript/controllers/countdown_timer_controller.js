@@ -4,7 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     console.log("howdy");
-    let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.1}`); // Need to be able to interpolate in study_duration / pass as argument
+    let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.2}`); // Need to be able to interpolate in study_duration / pass as argument
     let hours, minutes, seconds; // variables for time units
 
     let countdown = document.getElementById("tiles"); // get tag element
@@ -30,7 +30,7 @@ export default class extends Controller {
       countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
       if (seconds_left < 0 & url === '/quickstart') {
         countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
-        location.replace('/tease');
+        window.location.href = ('/tease');
       }
       if (seconds_left < 0) {
         countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
