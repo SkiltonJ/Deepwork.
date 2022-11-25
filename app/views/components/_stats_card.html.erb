@@ -25,7 +25,7 @@
               <p class="progress-text">Minutes focussed</p>
               <div class="progress">
                 <div class="progress-fill-1" id="progress">
-                  <p class="progress-bar-text"> Minutes</p>
+                  <p class="progress-bar-text" id="minutes" data-minutes="<%= @study_sessions.pluck(:duration).sum %>" data-level= "<%= current_user.current_level %>"> <%= @study_sessions.pluck(:duration).sum %> Minutes</p>
                 </div>
               </div>
               <p class="progress-text">69%</p>
@@ -51,7 +51,7 @@
           </div>
           <div class="col-3">
             <div class="photo">
-              <p>Level 10</p>
+              <p>Level <%= current_user.current_level %></p>
               <%= image_tag "vitruvian.jpg" %>
             </div>
             <div class="photo">
@@ -63,8 +63,6 @@
               <%= image_tag "Albert-Einstein.jpg" %>
             </div>
           </div>
-            <button class="sesh">session</button>
-
         </div>
       </div>
     </div>
