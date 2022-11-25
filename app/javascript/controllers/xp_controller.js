@@ -17,11 +17,11 @@ export default class extends Controller {
     let xp = 0;
     // const session = 10;
     // const sesh = document.querySelector(".sesh");
-    const progress = document.getElementById("progress");
-    const min = document.getElementById("minutes");
-    const session = Number(min.dataset.minutes);
-    const user_level = min.dataset.level;
-    const level = maxExp[user_level];
+    const progress = document.getElementById("progress");      //the fill of the xp bar
+    const minutes = document.getElementById("minutes");        //xp bar text
+    const session = Number(minutes.dataset.minutes);           //total mintues in all sessions
+    const user_level = minutes.dataset.level;                 //Level of the user
+    const level = maxExp[user_level];                         //the max value of the level range
     console.log(level);
     function updateCounters(event) {
       let color = progress.style.backgroundColor;
