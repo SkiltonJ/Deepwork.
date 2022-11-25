@@ -9,11 +9,22 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # def current_level
-  #   if ?? < 1000
-  #     1
-  # end
+  def current_level
+    duration = study_sessions.sum(:duration)
+    if duration < 100
+      1
+    elsif duration < 300
+      2
+    elsif duration < 600
+      3
+    elsif duration < 1000
+      4
+    elsif duration < 1500
+      5
+    elsif duration < 2100
+      6
+    elsif duration < 2800
+      7
+    end
+  end
 end
-
-
-# user stats method to get level and minutes??

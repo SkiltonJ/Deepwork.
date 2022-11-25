@@ -1,7 +1,6 @@
-
 <% if action_name == "profile" %>
-<div class="hub-container">
-  <div class="stats-container">
+<div class="p-container height-100">
+  <div class="stats-container height-100">
   <% else %>
 <div class="landing-card-sm-container">
   <div class="landing-stats-container-sm">
@@ -9,32 +8,32 @@
     <nav>
       <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Stats</button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Message</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Sessions</button>
+        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Friends & Rooms</button>
         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Achievements</button>
         <%# <button class="nav-link" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false" disabled>Disabled</button> %>
       </div>
     </nav>
-    <div class="tab-content" id="nav-tabContent">
+    <div class="tab-content height-100" id="nav-tabContent">
       <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
-        <div class="achievements-header">
-          <h3>Statistics</h3>
-        </div>
-        <div class="row" data-controller="xp">
-          <div class="stats-box col-9">
+        <div class="row">
+          <div class="stats-box col-9" data-controller="xp">
+
+
             <div class="stats-bar mb-3">
-              <p class="progress-text">Minutes focussed</p>
+              <p class="progress-text">Total Minutes focussed</p>
               <div class="progress">
                 <div class="progress-fill-1" id="progress">
-                  <p class="progress-bar-text"> Minutes</p>
+                  <p class="progress-bar-text" id="minutes" data-minutes="<%= @study_sessions.pluck(:duration).sum %>" data-level= "<%= current_user.current_level %>"> <%= @study_sessions.pluck(:duration).sum %> Minutes</p>
                 </div>
               </div>
-              <p class="progress-text">69%</p>
+              <p class="progress-bar-text">38%</p>
             </div>
             <div class="stats-bar mb-3">
               <p class="progress-text">Study blocks completed</p>
               <div class="progress">
                 <div class="progress-fill-2" id="progress">
-                  <p class="progress-text">69 completed</p>
+                  <p class="progress-bar-text">22 blocks completed</p>
                 </div>
               </div>
               <p class="progress-bar-text">69%</p>
@@ -43,15 +42,15 @@
               <p class="progress-text">Deepwork days completed</p>
                 <div class="progress">
                   <div class="progress-fill-3">
-                    <p class="progress-text">69</p>
+                    <p class="progress-bar-text">70 days</p>
                   </div>
                 </div>
-                <p class="progress-bar-text">69%</p>
+                <p class="progress-bar-text">70%</p>
             </div>
           </div>
           <div class="col-3">
             <div class="photo">
-              <p>Level 10</p>
+              <p>Level <%= current_user.current_level %></p>
               <%= image_tag "vitruvian.jpg" %>
             </div>
             <div class="photo">
@@ -63,8 +62,6 @@
               <%= image_tag "Albert-Einstein.jpg" %>
             </div>
           </div>
-            <button class="sesh">session</button>
-
         </div>
       </div>
     </div>
