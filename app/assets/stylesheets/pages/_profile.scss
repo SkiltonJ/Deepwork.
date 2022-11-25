@@ -10,6 +10,20 @@
   grid-template-columns: 1184fr 328fr;
 }
 
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .profile_quote_div {
   margin-left: 69px;
   margin-top: 50px;
