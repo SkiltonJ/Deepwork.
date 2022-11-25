@@ -18,9 +18,9 @@ export default class extends Controller {
       if (xp <= 110) {
         console.log("howdy");
         color = "blue";
-        fill = xp;
-        progress.style.backgroundColor = "blue";
-        progress.style.width = `${fill}%`;
+        // fill = xp;
+        progress.style.backgroundColor = "cyan";
+        progress.style.width = `${xp}%`;
       } else {
         console.log("You Leveled up!!");
         progress.style.width = `0%`;
@@ -34,6 +34,9 @@ export default class extends Controller {
   }
 }
 // Transition on PAGE LOAD
+
+  // NEED TO FIX AFTER PULLING
+// Transition to make the bar load up to a certain % on page load (set interval)
 // Connect the xp to the minutes that are actually studied
   // connect to user model?
 // make the function listen to when the timer is done? or the value that is input into the intention thing?

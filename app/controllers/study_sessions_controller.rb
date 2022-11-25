@@ -9,6 +9,6 @@ class StudySessionsController < ApplicationController
   end
 
   def create
-    
+
   end
 end
