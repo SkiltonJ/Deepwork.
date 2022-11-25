@@ -5,11 +5,9 @@
   justify-content: space-between;
 }
 
-.profile-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
+.profile_left {
+
+  height: 94%;
 }
 
 .profile-right {
@@ -19,10 +17,10 @@
   align-items: flex-end;
 }
 
-.button-flex {
-  display: flex;
-  justify-content: space-between;
-}
+// .button-flex {
+//   display: flex;
+//   justify-content: space-between;
+// }
 
 
 .theme-form-container {

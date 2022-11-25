@@ -5,15 +5,29 @@
   margin-top: -80px;
 }
 
+.profile-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.profile_right {
+  margin-top: 39.5px;
+}
+
 .profile-page {
   display: grid;
+  width: 100%;
   grid-template-columns: 1184fr 328fr;
+  padding: 36px;
+  gap: 36px;
 }
 
 .profile_quote_div {
-  margin-left: 69px;
-  margin-top: 50px;
-  margin-bottom: 70px;
+  margin-left: 219px;
+  margin-top: 34px;
+  margin-bottom: 25px;
 }
 .profile_quote {
   font-family: $inria;

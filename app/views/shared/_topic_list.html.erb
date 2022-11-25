@@ -2,9 +2,8 @@
   <div class="topic-list">
     <h2 class="topic-heading">Topic List</h2>
     <div class="topic-form">
-
       <a class="new-item-button" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">add topic</a>
-      <div class="collapse multi-collapse" id="multiCollapseExample1">
+      <div id="multiCollapseExample1">
         <div class="card card-body">
         <%= simple_form_for @topic do |f| %>
         <%= f.input :name %>
@@ -13,12 +12,12 @@
         </div>
       </div>
     </div>
-    <div class="topic-items">
-      <ul>
-        <% @topics.each do |topic|  %>
-          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
-        <% end %>
-      </ul>
-    </div>
+  </div>
+  <div class="topic-items">
+    <ul>
+      <% @topics.each do |topic|  %>
+        <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
+      <% end %>
+    </ul>
   </div>
 </div>
