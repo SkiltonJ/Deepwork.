@@ -12,4 +12,6 @@ Rails.application.routes.draw do
   end
 
   resources :study_sessions, only: [:index, :show]
+
+  resources :topics, only: [:create, :destroy]
 end

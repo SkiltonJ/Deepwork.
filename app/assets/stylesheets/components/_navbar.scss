@@ -14,13 +14,15 @@
 }
 
 .nav-dropdown {
-  background-color: #F4F4F4;
+  background-color: transparent;
   border: none;
+  right: 135px;
   text-align: center;
+  left: 135px;
 }
 
 .nav-profile {
-  margin-right: 125px;
+  margin-right: 155px;
   margin-left: 125px;
 }
 
@@ -32,7 +34,27 @@
   padding-right: 34px;
   padding-top: 13px;
   padding-bottom: 13px;
-  color: #232D34;
+  color: $primary-text;
+  font-family: $satoshi;
+  text-decoration: none;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: #F4F4F4;
+  &:hover {
+    color: white;
+    transition: .3s;
+    background-color: #F4F4F4;
+  }
+}
+
+.navbar-header-white {
+  font-size: 15px;
+  font-weight: 600;
+  padding-left: 34px;
+  padding-right: 34px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  color: white;
   font-family: $satoshi;
   text-decoration: none;
   margin-left: 4px;
@@ -40,7 +62,8 @@
   &:hover {
     color: white;
     transition: .3s;
-    background-color: #F4F4F4;
+    font-size: 16px;
+    background-color: transparent;
   }
 }
 

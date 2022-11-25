@@ -118,3 +118,15 @@
     padding: 16px 48px;
   }
 }
+
+.new-item-button {
+  background-color: $dark-grey;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 10px;
+  color: $light-grey;
+}
+
+.new-item-button:hover {
+  color: $salmon;
+}

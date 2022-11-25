@@ -1,3 +1,5 @@
+  <button class="sesh">session</button>
+
 <% if action_name == "profile" %>
 <div class="hub-container">
   <div class="stats-container">
@@ -19,11 +21,11 @@
           <h3>Statistics</h3>
         </div>
         <div class="row">
-          <div class="stats-box col-9">
+          <div class="stats-box col-9" data-controller="xp">
             <div class="stats-bar mb-3">
               <p class="progress-text">Minutes focussed</p>
               <div class="progress">
-                <div class="progress-fill-1">
+                <div class="progress-fill-1" id="progress">
                   <p class="progress-bar-text">69000 minutes focussed</p>
                 </div>
               </div>
@@ -32,7 +34,7 @@
             <div class="stats-bar mb-3">
               <p class="progress-text">Study blocks completed</p>
               <div class="progress">
-                <div class="progress-fill-2">
+                <div class="progress-fill-2" id="progress">
                   <p class="progress-text">69 completed</p>
                 </div>
               </div>
