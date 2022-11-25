@@ -12,12 +12,12 @@
         </div>
       </div>
     </div>
-    <div class="topic-items">
-      <ul>
-        <% @topics.each do |topic|  %>
-          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
-        <% end %>
-      </ul>
-    </div>
+  </div>
+  <div class="topic-items">
+    <ul>
+      <% @topics.each do |topic|  %>
+        <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
+      <% end %>
+    </ul>
   </div>
 </div>

@@ -49,8 +49,33 @@
       </div>
     </div>
 
-    <div class="spotify-card">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/37i9dQZF1DX5trt9i14X7j?utm_source=generator" width="300" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+    <div class="tease">
+      <div class="tease-header mb-3">
+        <h3>Deepwork.</h3>
+      </div>
+      <div class="tease-content mb-3">
+        <p>Congratulations!! You have completed your first Deepwork session.</p>
+      </div>
+      <div class="stats-bar mb-3 ps-3 pe-3">
+        <p class="progress-text">Minutes focussed</p>
+        <div class="progress">
+          <div class="progress-fill-1">
+            <p class="progress-bar-text">30 minutes</p>
+          </div>
+        </div>
+        <p class="progress-text">30%</p>
+      </div>
+      <div class="tease-content mb-3">
+        <p>Create an account to immerse yourself in productivity!</p>
+      </div>
+      <div class="tease-buttons mb-3">
+        <%= link_to new_user_registration_path do %>
+          <div class="primary-button w-100 sign-up">Sign Up</div>
+        <% end %>
+        <%= link_to root_path do %>
+          <div class="secondary-button w-100 sign-up">Home</div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>

@@ -1,0 +1,38 @@
+
+// New Nav
+.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.nav-contents {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  padding: 20px 20px 15px 20px;
+}
+.nav-left {
+  h4 {
+    font-size: 36px;
+    font-family: $zodiak;
+  }
+  .nav-link {
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+    &:hover {
+      color: $white;
+      background-color: transparent;
+    }
+  }
+}
+.nav-center {
+  display: flex;
+  p {
+    padding: 0px 20px;
+  }
+}
+.nav-right {
+  display: flex;
+}
