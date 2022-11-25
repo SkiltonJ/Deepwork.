@@ -1,0 +1,24 @@
+<%# Landing Nav %>
+<%# <section class="hero-2"> %>
+  <div class="navbar-container">
+    <div class="nav-contents">
+      <div class="nav-left">
+        <h4><%= link_to "Deepwork.", root_path, class: "nav-link" %></h4>
+      </div>
+      <div class="nav-center">
+        <p>How it works</p>
+        <p>Resources</p>
+      </div>
+      <% if user_signed_in? %>
+      <div class="nav-right">
+        <p><%= link_to "Profile", profile_path, class: "nav-login-landing" %></p>
+        <p><%= link_to "Log Out", destroy_user_session_path, class: "nav-sign-up-landing" %></p>
+      </div>
+      <% else %>
+      <div class="nav-right">
+        <p><%= link_to "Login", new_user_session_path, class: "nav-login-landing" %></p>
+        <p><%= link_to "Sign up", new_user_registration_path, class: "nav-sign-up-landing" %></p>
+      </div>
+      <% end %>
+    </div>
+  </div>
