@@ -161,6 +161,31 @@
   }
 }
 
+// Template-card-profile
+.template-card-landing{
+  position: absolute;
+  left: 0px;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  width: 350px;
+  height: 255px;
+  border-radius: 25px;
+  margin-top: 20px;
+  background-image: url(background_snap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: .3s;
+  transform-origin: center 120%;
+  p {
+    margin: 0 auto;
+  }
+  &:active {
+    transform: scaleX(5%);
+    z-index: 10000;
+  }
+}
+
 
 
 // ----------------------CARDS FOR PROFILE--------------------------

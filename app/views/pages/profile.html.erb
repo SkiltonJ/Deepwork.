@@ -11,10 +11,12 @@
 <div class="profile-page">
   <div class="profile_left">
     <div>
-      <%= render "components/stats_card" %>
+      <% @themes.each do |theme| %>
+        <%= render "shared/template_card_profile", theme: theme %>
+      <% end %>
     </div>
     <div>
-      <%= render "shared/template_card" %>
+      <%= render "components/stats_card" %>
     </div>
   </div>
 

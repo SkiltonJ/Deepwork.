@@ -7,9 +7,10 @@ class PagesController < ApplicationController
 
   def profile
   # Build to be able to access all user data
-    @study_sessions = StudySession.all
-    @topics = Topic.all
+    @study_sessions = current_user.study_sessions
+    @topics = current_user.topics
     @topic = Topic.new
+    @themes = current_user.themes
   end
 
   def quickstart

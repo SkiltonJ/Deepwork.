@@ -1,0 +1,9 @@
+<div class="small-container">
+  <div class="content-container">
+    <%= link_to theme_study_sessions_path(theme), data: {turbo_method: :post} do %>
+      <div class="template-card-landing" id="card-1">
+        <p><%= theme.name %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
