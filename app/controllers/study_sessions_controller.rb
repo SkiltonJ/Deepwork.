@@ -20,7 +20,7 @@ class StudySessionsController < ApplicationController
     end
   end
 
-  private
+  # private
 
   # def session_params
   #   params.require(:study_session).permit(:intention, :theme_id)
