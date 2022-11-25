@@ -1,0 +1,28 @@
+
+
+// footer pre-partial
+
+.footer-container {
+  border-top: 1px solid $smoke-grey;
+  margin: 0 20px;
+  font-family: $zodiak;
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-top: 20px;
+  margin: 5px 50px 10px;
+}
+.left-f {
+  p {
+    font-size: 24px;
+  }
+}
+.right-f {
+  display: flex;
+  p {
+    padding-top: 5px;
+    margin: 0 20px;
+  }
+}
