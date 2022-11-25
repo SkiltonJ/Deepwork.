@@ -1,9 +1,8 @@
 .topic-container {
-  font-family: 'Ranade', sans-serif;
+  font-family: $satoshi;
   height: 406px;
-  color: #1C3B5A;
-  background-color: $white;
-  box-shadow: 1px 1px 8px $dark-grey;
+  color: $primary-text;
+  background-color: #EDF1F4;
   // width: 250px;
   width: 100%;
   padding: 10px;
@@ -12,22 +11,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 10px;
-  border-radius: 5px;
   overflow-y: scroll;
 }
 
 .topic-list {
   height: inherit;
+  text-align: center;
+  align-items: center;
 }
 
 .topic-heading {
-  font-size: 26px;
-  align-items: center;
+  font-size: 20px;
   padding: 0px;
   padding-left: 25px;
   padding-right: 25px;
+  padding-bottom: 5px;
   text-align: center;
+  border-bottom: solid 1px #CAD6E2 ;
+  background-color: #EDF1F4;
+  color: $primary-text;
+  display: inline-block;
+  font-size: 20px;
 }
 
 .topic-form {
@@ -54,24 +58,22 @@
 .topic-items li {
   padding: 2px;
   margin-bottom: 15px;
-  background-color: $white;
-  border-radius: 10px;
+  background-color: #CAD6E2;
   width: 250px;
   list-style: none;
+  text-align: center;
+  align-items: center;
   // box-shadow: 1px 1px 8px $dark-grey;
   // align-items: flex-start;
 }
 
 .topic-items li:hover {
-  background-color: $dark-grey;
+  color: white;
 }
 
 
 .topic-container input {
-  margin: 10px;
-  box-shadow: 1px 1px 2px $dark-grey;
   border: none;
-  border-radius: 10px;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
@@ -82,10 +84,26 @@
 }
 
 .topic-button {
-  border-radius: 5px;
   border: none;
-  background-color: rgb(26, 223, 127);
-  padding: 0px;
+  background-color: $primary-text;
+  color: white;
+  margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#multiCollapseExample1 {
+  background-color: #CAD6E2;
+  box-shadow: none;
+  border-radius: 0px;
+  width: 100%;
+
+}
+
+.card-body {
+  background-color: #CAD6E2;
+  box-shadow: none;
+  border-radius: 0px;
+  border: none;
+  margin-top: 5px;
 }
