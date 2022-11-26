@@ -8,14 +8,15 @@
 <div class="profile-container">
   <div class="p-column-container">
     <div class="right-p">
-      <p class="profile_quote"><span>Hello Jonathan,</span></p>
+      <p class="profile_quote"><span>Hello,</span></p>
        <%= render"components/stats_card" %>
     </div>
     <div class="left-p">
-      <%= link_to study_session_path(:user_id) do  %>
+      <%= link_to study_session_path(:id) do %>
        <div class="quickstart"> <%= render "components/primary_button_profile" %></div>
       <% end %>
         <%= render "shared/topic_list" %>
     </div>
   </div>
 </div>
+ 

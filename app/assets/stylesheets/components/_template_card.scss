@@ -162,7 +162,7 @@
 }
 
 // Template-card-profile
-.template-card-landing{
+.template-card-profile{
   position: absolute;
   left: 0px;
   z-index: 20;
@@ -170,6 +170,8 @@
   align-items: center;
   width: 350px;
   height: 255px;
+  width: 200px;
+  height: 130px;
   border-radius: 25px;
   margin-top: 20px;
   background-image: url(background_snap.png);
