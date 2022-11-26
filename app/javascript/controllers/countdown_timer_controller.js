@@ -11,7 +11,10 @@ export default class extends Controller {
 
     getCountdown();
 
-    setInterval(function () { getCountdown(); }, 1000);
+    const myInterval = setInterval(getCountdown, 1000);
+    // setInterval(function () { getCountdown(); }, 1000);
+    clearInterval(myInterval);
+    myInterval = setInterval(getCountdown, 1000);
 
     function getCountdown(){
       const url = window.location.pathname;
@@ -27,8 +30,9 @@ export default class extends Controller {
       seconds = pad( parseInt( seconds_left % 60 ) );
 
       // format countdown string + set tag value
+      const ifConditionalHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
       countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
-      if (seconds_left < 0 & url === '/quickstart') {
+      if (countdown.innerHTML === ifConditionalHTML & url === '/quickstart') {
         countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
         window.location.href = ('/tease');
       }
