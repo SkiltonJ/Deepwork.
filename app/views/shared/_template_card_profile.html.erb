@@ -1,9 +1,13 @@
 <div class="small-container">
   <div class="content-container">
-    <%= link_to theme_study_sessions_path(theme), data: { turbo_method: :post } do %>
-      <div class="template-card-profile" id="card-1">
-        <p><%= theme.name %></p>
-      </div>
+    <% @themes.each do |theme| %>
+      <%= link_to theme_study_sessions_path(theme), data: { turbo_method: :post } do %>
+        <div>
+        <ul>
+          <li><%= theme.name %></li>
+        </ul>
+        </div>
+      <% end %>
     <% end %>
   </div>
 </div>
