@@ -109,9 +109,7 @@
 }
 
 // landing button
-.cta {
-  margin-top: 60px;
-}
+
 .land-button {
   text-decoration: none;
   color: black;
@@ -177,4 +175,24 @@
 .timer {
   position: absolute;
   bottom: 80px;
+}
+
+
+
+// Button on homepage that we can mess around with
+.cta {
+  margin-top: 60px;
+  transition: transform .4s;
+  &:hover {
+    transition: .4s;
+    transform: scale(1.05);
+  }
+  .button {
+    padding: 10px 20px;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+  }
 }

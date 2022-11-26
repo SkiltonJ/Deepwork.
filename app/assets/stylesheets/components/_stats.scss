@@ -76,18 +76,18 @@ text-align: center;
   color: $primary-text;
   font-family: $satoshi;
   text-decoration: none;
-  background-color: #F4F4F4;
+  background-color: #CAD6E2;
   border: none;
   &:hover {
     color: white;
     transition: .3s;
-    background-color: #F4F4F4;
+    background-color: #CAD6E2;
   }
   width: 100%;
     .active {
-    color: white;
-    background-color: #EDF1F4 !important;
-    border: none;
+    color: #232D34;
+    background-color: $white !important;
+    border-top: 1px solid $smoke-grey;
   }
 }
 
@@ -103,7 +103,8 @@ text-align: center;
 }
 
 .tab-content {
-  background-color: #EDF1F4;
+  background-color: $white;
+  height: 60vh;
 }
 
 .achievements-header {
