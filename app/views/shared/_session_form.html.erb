@@ -1,7 +1,7 @@
 
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-  Launch static backdrop modal
+  Session form modal - will eventually have pop up upon arriving to page
 </button>
 
 <!-- Modal -->
@@ -13,7 +13,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @study_session do |f| %>
+        <%= simple_form_for @study_session, method: :patch do |f| %>
           <%= f.input :intention %>
           <%= f.input :topic, collection: current_user.topics %>
           <%= f.submit %>
