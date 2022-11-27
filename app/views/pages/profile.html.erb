@@ -1,20 +1,53 @@
-<% if user_signed_in? %>
-  <%= render "shared/navbar_logged_in" %>
-<% else %>
-  <%= render "shared/navbar_logged_out" %>
-<% end %>
 
-<div class="profile-container">
-  <div class="p-column-container">
-    <div class="right-p">
-      <p class="profile_quote"><span>Hello Jonathan,</span></p>
-       <%= render"components/stats_card" %>
+<div class="page-container">
+  <div class="left-p">
+      <div class="title-corner">
+        <h4><%= link_to "Deepwork.", root_path %></h4>
+      </div>
+      <div class="profile-bar">
+        <p class="avatar"></p>
+        <h4>Matt Kettelkamp</h4>
+        <p>Level 2</p>
+      </div>
+      <div class="tabs" data-controller="tab">
+        <nav class="nav flex-column" id="v-pills-tab" role="tablist"  aria-orientation="vertical">
+          <a class="nav-link active" id="v-pills-stats-tab" data-bs-toggle="pill" data-bs-target="#v-pills-stats" role="tab" aria-controls="v-pills-stats" aria-selected="true"href="#">Stats</a>
+          <a class="nav-link" id="v-pills-sessions-tab" data-bs-toggle="pill" data-bs-target="#v-pills-sessions" role="tab" aria-controls="v-pills-messages" aria-selected="false"href="#">Sessions</a>
+          <a class="nav-link" id="v-pills-templates-tab" data-bs-toggle="pill" data-bs-target="#v-pills-templates" role="tab" aria-controls="v-pills-templates" aria-selected="false"href="#">Templates</a>
+          <a class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false"href="#">Messages</a>
+          <a class="nav-link" id="v-pills-topics-tab" data-bs-toggle="pill" data-bs-target="#v-pills-topics" role="tab" aria-controls="v-pills-topics" aria-selected="false"href="#">Topics</a>
+          <a class="nav-link" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false"href="#">Settings</a>
+        </nav>
+      </div>
     </div>
-    <div class="left-p">
-      <%= link_to study_session_path(:user_id) do  %>
-       <div class="quickstart"> <%= render "components/primary_button_profile" %></div>
-      <% end %>
-        <%= render "shared/topic_list" %>
+  <div class="profile-container">
+    <div class="template-container">
+      <div class="header-p">
+        <h3>Environments</h3>
+        <%= link_to study_session_path(:user_id) do  %>
+          <div class="start"> <%= render "components/primary_button_profile" %></div>
+        <% end %>
+      </div>
+      <div class="environments">
+        <div class="template-card-dash">
+        </div>
+        <div class="template-card-dash-2">
+        </div>
+        <div class="template-card-dash-3">
+        </div>
+        <div class="template-card-dash-4">
+        </div>
+      </div>
+    </div>
+    <div class="p-column-container" data-controller="tab">
+      <div class="center-p tab-content" id="v-pills-tabContent">
+        <div class="tab-pane fade show active" id="v-pills-stats" role="tabpanel" aria-labelledby="v-pills-stats-tab">Put stats here</div>
+        <div class="tab-pane fade" id="v-pills-sessions" role="tabpanel" aria-labelledby="v-pills-sessions-tab">sessions </div>
+        <div class="tab-pane fade" id="v-pills-templates" role="tabpanel" aria-labelledby="v-pills-templates-tab">Should display the various templates here i guess: <%= render "shared/theme_tab" %></div>
+        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">messages</div>
+        <div class="tab-pane fade" id="v-pills-topics" role="tabpanel" aria-labelledby="v-pills-topics-tab">topics</div>
+        <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">settings</div>
+      </div>
     </div>
   </div>
 </div>

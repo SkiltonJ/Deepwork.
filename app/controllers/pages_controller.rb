@@ -10,6 +10,7 @@ class PagesController < ApplicationController
     @study_sessions = StudySession.all
     @topics = Topic.all
     @topic = Topic.new
+    @themes = Theme.all # is this accessing the theme templates of the sessions?
   end
 
   def quickstart
@@ -18,17 +19,3 @@ class PagesController < ApplicationController
   def tease
   end
 end
-
-
-
-
-
-# a counter that will add up the total xp from a session
-# Start with a fixed 20xp per session
-#  - Session length for the 20xp will have to be defined so if a longer session then
-      # they will get more xp
-# Will this be tied to the timer ending?
-# maybe just start with linking it to a button click to see if you can make the
-  # bar increase still
-# Start with doing it all in Javascript then i can add ruby to connect it to the
-  # backend to store in DB

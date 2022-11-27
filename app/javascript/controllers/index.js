@@ -7,12 +7,14 @@ import { application } from "./application"
 import ClockController from "./clock_controller"
 application.register("clock", ClockController)
 
-import XpController from "./xp_controller"
-application.register("xp", XpController)
-
 import CountdownTimerController from "./countdown_timer_controller"
 application.register("countdown-timer", CountdownTimerController)
 
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
 
+import TabController from "./tab_controller"
+application.register("tab", TabController)
+
+import XpController from "./xp_controller"
+application.register("xp", XpController)

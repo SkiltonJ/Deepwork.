@@ -1,8 +1,9 @@
 .topic-container {
   font-family: $satoshi;
-  height: 406px;
+  // height: 406px;
+
   color: $primary-text;
-  background-color: #EDF1F4;
+  background-color: transparent;
   // width: 250px;
   width: 100%;
   padding: 10px;
@@ -12,7 +13,12 @@
   align-items: center;
   justify-content: center;
   overflow-y: scroll;
+  border-right: 1px solid $smoke-grey;
+  border-left: 1px solid $smoke-grey;
+  border-radius: 5px;
+  // box-shadow: inset 1px 1px 6px 0px rgb(206, 193, 193);
 }
+
 
 .topic-list {
   height: inherit;
@@ -21,17 +27,14 @@
 }
 
 .topic-heading {
-  font-size: 20px;
-  padding: 0px;
+  font-size: 26px;
   padding-left: 25px;
   padding-right: 25px;
   padding-bottom: 5px;
   text-align: center;
-  border-bottom: solid 1px #CAD6E2 ;
-  background-color: #EDF1F4;
+  // border-bottom: solid 1px #CAD6E2 ;
+  // background-color: $white;
   color: $primary-text;
-  display: inline-block;
-  font-size: 20px;
 }
 
 .topic-form {
@@ -58,8 +61,10 @@
 .topic-items li {
   padding: 2px;
   margin-bottom: 15px;
-  background-color: #CAD6E2;
-  width: 250px;
+  background-color: transparent;
+  border-bottom: 1px solid $smoke-grey;
+  // width: 250px;
+  padding: 5px 15px;
   list-style: none;
   text-align: center;
   align-items: center;
@@ -68,15 +73,15 @@
 }
 
 .topic-items li:hover {
-  color: white;
+  color: $smoke-grey;
 }
 
 
 .topic-container input {
-  border: none;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
+  border-radius: 5px;
 }
 
 .input-box {
@@ -86,14 +91,14 @@
 .topic-button {
   border: none;
   background-color: $primary-text;
-  color: white;
+  color: $smoke-grey;
   margin-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 #multiCollapseExample1 {
-  background-color: #CAD6E2;
+  background-color: transparent;
   box-shadow: none;
   border-radius: 0px;
   width: 100%;
@@ -101,7 +106,7 @@
 }
 
 .card-body {
-  background-color: #CAD6E2;
+  background-color: transparent;
   box-shadow: none;
   border-radius: 0px;
   border: none;
