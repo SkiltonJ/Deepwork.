@@ -15,8 +15,8 @@
       <div class="modal-body">
         <%= simple_form_for @study_session, method: :patch do |f| %>
           <%= f.input :intention %>
-          <%= f.input :topic, collection: current_user.topics %>
-          <%= f.submit %>
+          <%= f.input :topic_id, collection: current_user.topics %>
+          <%= f.button :submit, "Submit", class:"btn-secondary" %>
         <% end %>
       </div>
     </div>
