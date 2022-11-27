@@ -50,19 +50,23 @@ text-align: center;
   text-align: center;
 }
 
-.nav-link {
-  color: $primary-text;
-  border: none;
 
+
+.nav-link {
+  color: black;
   &:hover {
-    color: white;
-    border: none;
+    color: $smoke-grey;
+  }
+  .active {
+    border-top: 1px solid $smoke-grey;
+    background-color: rgba(255, 255, 255, 0.739);
   }
 }
 
 .tab-pane {
   padding-left: 36px;
   padding-top: 16px;
+
 }
 
 .height-100 {
@@ -76,18 +80,18 @@ text-align: center;
   color: $primary-text;
   font-family: $satoshi;
   text-decoration: none;
-  background-color: #CAD6E2;
-  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid $smoke-grey;
   &:hover {
-    color: white;
+    color: $smoke-grey;
     transition: .3s;
-    background-color: #CAD6E2;
+    background-color: transparent;
   }
   width: 100%;
     .active {
     color: #232D34;
+    border-bottom: none;
     background-color: $white !important;
-    border-top: 1px solid $smoke-grey;
   }
 }
 
@@ -102,17 +106,13 @@ text-align: center;
   }
 }
 
-.tab-content {
-  background-color: $white;
-  height: 60vh;
-}
-
 .achievements-header {
-
-
     text-align: center;
     background-color: #EDF1F4;
     color: #232D34;
     display: inline-block;
     font-size: 20px;
+}
+.stats-bar {
+  margin-bottom: 30px;
 }
