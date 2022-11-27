@@ -13,7 +13,7 @@
 // sets up the column widths for the stats n shit
 .p-column-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
+  grid-template-columns: 3fr 1fr; //add columns here if you want to make the tab section different layout
   gap: 30px;
 }
 .left-p {
@@ -162,17 +162,6 @@
   width: 220px;
   height: 145px;
   background-image: url(ski.JPG);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-
-
-.template-card-custom {
-  width: 220px;
-  height: 145px;
-  // background-image: url(ski.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
