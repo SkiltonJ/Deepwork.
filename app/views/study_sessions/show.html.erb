@@ -1,9 +1,5 @@
-<%# Session page %>
 
-<%# Study Intention Form %>
-<%= simple_form_for [@themes, @study_sessions] do |f| %>
-  <%= f.input :username %>
-  <%= f.input :password %>
-  <%= f.button :submit %>
-<% end %>
+<div class="session">
+  <%= render "shared/session_form" %>
+</div>
 
