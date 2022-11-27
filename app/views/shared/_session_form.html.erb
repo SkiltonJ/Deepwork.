@@ -13,10 +13,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <%= simple_form_for @study_session, method: :patch  do |f| %>
+        <%= simple_form_for @study_session, method: :patch do |f| %>
           <%= f.input :intention %>
           <%= f.input :topic_id, collection: current_user.topics %>
-          <%= f.submit %>
+          <%= f.button :submit, "Submit", class:"btn-secondary" %>
         <% end %>
       </div>
     </div>

@@ -25,6 +25,7 @@ class StudySessionsController < ApplicationController
     # @topic = Topic.find(params[:topic_id])
     # @theme = Theme.find(params[:theme_id])
     @session = StudySession.find(params[:id])
+    # @session.topic_id = @topic
     # @session.user = current_user
     @session.update(session_params)
     if @session.save
