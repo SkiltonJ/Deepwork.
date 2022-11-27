@@ -1,62 +1,169 @@
-
+// main page container to have two columns
+.page-container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+// holds the profile content in a fixed size
 .profile-container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 25px 50px 50px 50px;
+  display: flex;
+  flex-direction: column;
 }
+// sets up the column widths for the stats n shit
 .p-column-container {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
+  grid-template-columns: 3fr 1fr; //add columns here if you want to make the tab section different layout
+  gap: 30px;
 }
-.profile_quote {
-  span {
-    font-size: 28px;
+.left-p {
+  display: flex;
+  // justify-content: center;
+  flex-direction: column;
+  background-color: $white;
+  height: 100vh;
+}
+.title-corner {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  h4 {
+    font-size: 32px;
     font-family: $zodiak;
+    font-weight: 400;
   }
-  padding-top: 25px;
-  margin-top: 20px;
-  padding-bottom: 50px;
-  font-size: 18px;
-  color: $primary-text;
-  font-weight: 400;
+  a {
+    text-decoration: none;
+    color: $black;
+  }
+}
+.profile-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 10px 10px 10px;
+  border-bottom: 1px solid $smoke-grey;
+}
+
+
+.nav {
+  padding: 15px 0px 15px 5px;
+  align-items: center;
+  a {
+    position: relative;
+    padding: 15px 0px 15px 5px;
+    width: 100%;
+    text-align: center;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
+  .active {
+    background-color: $light-gray;
+    transition: opacity .4s;
+    color: $smoke-grey;
+  }
+  .active::after {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    bottom: -30px;
+    right: 0px;
+    height: 30px;
+    width: 20px;
+    border-top-right-radius: 15px;
+    box-shadow: 0 -15px 0 0 $light-gray;
+    opacity: 1;
+  }
+  .active::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: -30px;
+    right: 0px;
+    height: 30px;
+    width: 20px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 15px 0 0 $light-gray;
+    opacity: 1;
+  }
 }
 
 
 
-// .right-container {
-//   max-width: 1100px;
-//   margin-left: 50px;
-// }
-// .profile-column-right {
-//   max-width: 1000px;
-//   display: flex;
-//   justify-content: flex-start;
-// }
-// .profile_banner {
-//   width: 100%;
-//   height: 235px;
-//   z-index: 1;
-//   margin-top: -80px;
-// }
+// Template Card Section
+.template-container {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+}
+.header-p {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding-bottom: 20px;
+  h3 {
+    font-family: $zodiak;
+    font-weight: 350;
+  }
+  h3:before {
+    position: absolute;
+    content: "";
+    background-color: black;
+    bottom: 25px;
+    height: 1px;
+    width: 220px;
+    border-bottom: 1px solid black;
+  }
+}
+.environments {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-bottom: 10px;
+}
+.environments::before {
+  content: '';
+  position: absolute;
+  background-color: black;
+  bottom: -10px;
+  height: 1px;
+  width: 1000px;
 
-// .profile-left {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   align-items: flex-start;
-// }
-
-// .profile-page {
-//   display: grid;
-//   max-width: 1250px;
-//   margin: 0 auto;
-//   grid-template-columns: 1184fr 328fr;
-//   padding: 10px;
-//   gap: 36px;
-// }
-
-// .profile_quote_div {
-//   display: flex;
-//   justify-content: center;
-//   padding: 28px;
-// }
+}
+// The cards need to be separate for now because static backgrounds
+.template-card-dash {
+  width: 220px;
+  height: 145px;
+  background-image: url(background_snap.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.template-card-dash-2 {
+  width: 220px;
+  height: 145px;
+  background-image: url(sunset.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.template-card-dash-3 {
+  width: 220px;
+  height: 145px;
+  background-image: url(field_dream.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.template-card-dash-4 {
+  width: 220px;
+  height: 145px;
+  background-image: url(ski.JPG);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
