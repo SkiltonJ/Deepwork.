@@ -17,21 +17,21 @@ export default class extends Controller {
     let xp = 0;
     // const session = 10;
     // const sesh = document.querySelector(".sesh");
-    const progress = document.getElementById("progress");      //the fill of the xp bar
-    const minutes = document.getElementById("minutes");        //xp bar text
-    const session = Number(minutes.dataset.minutes);           //total mintues in all sessions
-    const user_level = minutes.dataset.level;                 //Level of the user
-    const level = maxExp[user_level];                         //the max value of the level range
+    const progress = document.getElementById("progress");     //the fill of the xp bar
+    const nextLevel = document.getElementById("next-level");       //xp bar text
+    const session = Number(progress.dataset.minutes);          //total mintues in all sessions
+    const user_level = progress.dataset.level;                 //Level of the user
+    const level = maxExp[user_level];                          //the max value of the level range
+    const nextLevelXP = level - session;                       // the xp left to get to next level
     console.log(level);
-    function updateCounters(event) {
+    function updateCounters() {
       let color = progress.style.backgroundColor;
       let fill = progress.style.width;
-      const
       xp = (session / level) * 100;
       console.log(xp);
       if (xp <= 110) {
         console.log("howdy");
-        progress.style.backgroundColor = "cyan";
+        progress.style.backgroundColor = "$smoke-grey";
         progress.style.width = `${xp}%`;
       } else if (xp <= 300) {
         console.log("You Leveled up!!");
@@ -59,11 +59,12 @@ export default class extends Controller {
         progress.style.width = `${xp}%`;
         progress.style.backgroundColor = "cyan";
       }
+      nextLevel.innerHTML = `${nextLevelXP} XP Till Next Level`;
     }
 
     // setInterval(updateCounters, 2000);
     // clicking the button acts as a session ending.
-    updateCounters()
+    updateCounters();
   }
 }
 // Transition on PAGE LOAD
