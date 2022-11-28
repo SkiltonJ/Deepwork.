@@ -29,7 +29,7 @@ class StudySessionsController < ApplicationController
     # @session.user = current_user
     @session.update(session_params)
     if @session.save
-      redirect_to study_session_path(@session)
+      render :ok
     else
       render :back, status: :unprocessable_entity
     end
