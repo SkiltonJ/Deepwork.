@@ -14,7 +14,7 @@ class StudySessionsController < ApplicationController
     @session = StudySession.new
     @session.theme = @theme
     if @session.save
-      redirect_to study_session_path(@session)
+      redirect_to study_session_path(@session, modal_param: true)
     else
       render :back, status: :unprocessable_entity
     end
