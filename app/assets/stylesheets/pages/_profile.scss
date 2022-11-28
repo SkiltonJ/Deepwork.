@@ -16,6 +16,7 @@
   grid-template-columns: 3fr 1fr; //add columns here if you want to make the tab section different layout
   gap: 30px;
 }
+// Start of the nav bar on the side
 .left-p {
   display: flex;
   // justify-content: center;
@@ -28,7 +29,7 @@
   justify-content: center;
   padding: 20px;
   h4 {
-    font-size: 32px;
+    font-size: 36px;
     font-family: $zodiak;
     font-weight: 400;
   }
@@ -133,24 +134,6 @@
 .template-card-dash-2 {
   width: 220px;
   height: 145px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.template-card-dash-3 {
-  width: 220px;
-  height: 145px;
-  background-image: url(field_dream.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  margin-bottom: 20px;
-}
-.template-card-dash-4 {
-  width: 220px;
-  height: 145px;
-  background-image: url(ski.JPG);
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;

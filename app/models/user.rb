@@ -10,7 +10,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def current_level
-    duration = study_sessions.sum(:duration)
     if duration < 100
       1
     elsif duration < 300
@@ -26,5 +25,20 @@ class User < ApplicationRecord
     elsif duration < 2800
       7
     end
+  end
+
+  def duration
+    study_sessions.sum(:duration)
+  end
+
+  def daily_sessions
+    obj = StudySession.where("updated_at >= ?", Date.today)
+    obj.sum(:duration)
+    obj.count
+  end
+
+  def daily_session_total_time
+    obj = StudySession.where("updated_at >= ?", Date.today)
+    obj.sum(:duration)
   end
 end

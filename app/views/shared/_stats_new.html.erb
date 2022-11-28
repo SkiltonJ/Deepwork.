@@ -1,0 +1,16 @@
+<div class="stats-container-2">
+  <div class="xp-container" data-controller="xp">
+    <div class="stats-bar">
+      <p class="progress-text-2">Total Minutes Focused</p>
+      <div class="progress">
+      <p id="next-level"><%= current_user.duration %></p>
+        <div class="progress-fill-1-new" id="progress" data-minutes="<%= current_user.duration %>" data-level="<%= current_user.current_level %>">
+        </div>
+      </div>
+      <p class="progress-bar-text"><%= current_user.duration %> minutes - Level <%= current_user.current_level %></p>
+    </div>
+    <%# Create new chart for daily minutes and session amounts %>
+    <p> <%= current_user.daily_sessions %> Sessions Today</p>
+    <p><%= current_user.daily_session_total_time %> Minutes today</p>
+  </div>
+</div>

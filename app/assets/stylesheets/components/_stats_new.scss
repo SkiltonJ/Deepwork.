@@ -1,0 +1,54 @@
+.stats-container {
+  padding: 2px;
+  img {
+    height: 60px;
+    width: 60px;
+    border-radius: 25px;
+  }
+}
+// Text above bar
+.progress-text-2 {
+  font-size: 20px;
+font-weight: 500;
+color: #232D34;
+font-family: "Satoshi", "sans-serif";
+text-align: center;
+}
+.progress {
+  width: 100%;
+  height: 20px;
+  background: $white;
+  border-radius: 25px;
+  position: relative;
+  transition: .3s;
+  &:hover {
+    #next-level {
+      opacity: 1;
+      transition: .3s;
+    }
+  }
+}
+#progress {
+  transition: .4s;
+}
+// Text Below bar with stats
+.progress-bar-text {
+  font-size: 14px;
+  margin-top: 5px;
+  padding: 2.5px;
+  font-weight: 400;
+  color: #232D34;
+  font-family: "Satoshi", "sans-serif";
+  text-align: center;
+}
+.progress-fill-1-new {
+  height: 100%;
+  transition: .6s;
+  background-color: #CAD6E2;
+  border-radius: 25px;
+}
+#next-level {
+  position: absolute;
+  left: 300px;
+  opacity: 0;
+}

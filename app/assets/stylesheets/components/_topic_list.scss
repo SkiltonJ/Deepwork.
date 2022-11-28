@@ -62,7 +62,6 @@
   padding: 2px;
   margin-bottom: 15px;
   background-color: transparent;
-  border-bottom: 1px solid $smoke-grey;
   // width: 250px;
   padding: 5px 15px;
   list-style: none;
@@ -100,9 +99,9 @@
 #multiCollapseExample1 {
   background-color: transparent;
   box-shadow: none;
-  border-radius: 0px;
+  border-radius: 10px;
   width: 100%;
-
+  border: 1px solid $smoke-grey;
 }
 
 .card-body {
@@ -110,8 +109,5 @@
   box-shadow: none;
   border-radius: 0px;
   border: none;
-  margin-top: 5px;
+  // margin-top: 5px;
 }
-
-
-// New Topic Card
