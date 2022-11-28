@@ -6,7 +6,7 @@
       </div>
       <div class="profile-bar">
         <p class="avatar"></p>
-        <h4>Matt Kettelkamp</h4>
+        <h4> <%= current_user.first_name.capitalize %>  <%= current_user.last_name.capitalize %> </h4>
         <p>Level 2</p>
       </div>
       <div class="tabs" data-controller="tab">
@@ -41,7 +41,7 @@
     </div>
     <div class="p-column-container" data-controller="tab">
       <div class="center-p tab-content" id="v-pills-tabContent">
-        <div class="tab-pane fade show active" id="v-pills-stats" role="tabpanel" aria-labelledby="v-pills-stats-tab">Put stats here</div>
+        <div class="tab-pane fade show active" id="v-pills-stats" role="tabpanel" aria-labelledby="v-pills-stats-tab">Put stats here <%= render "shared/stats_new" %> </div>
         <div class="tab-pane fade" id="v-pills-sessions" role="tabpanel" aria-labelledby="v-pills-sessions-tab">sessions</div>
         <div class="tab-pane fade" id="v-pills-templates" role="tabpanel" aria-labelledby="v-pills-templates-tab">Should display the various templates here i guess: <%= render "shared/theme_tab" %></div>
         <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">messages</div>
@@ -54,4 +54,3 @@
     </div>
   </div>
 </div>
- 

@@ -1,6 +1,13 @@
 <div class="topic-container">
+  <h2 class="topic-heading">Your Topics</h2>
+  <div class="topic-items">
+      <ul>
+        <% @topics.each do |topic|  %>
+          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
+        <% end %>
+      </ul>
+    </div>
   <div class="topic-list">
-    <h2 class="topic-heading">Topic List</h2>
     <div class="topic-form">
       <a class="new-item-button" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">add topic</a>
       <div id="multiCollapseExample1">
@@ -13,11 +20,8 @@
       </div>
     </div>
   </div>
-  <div class="topic-items">
-    <ul>
-      <% @topics.each do |topic|  %>
-        <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
-      <% end %>
-    </ul>
-  </div>
+</div>
+
+<div class="topics-container">
+
 </div>
