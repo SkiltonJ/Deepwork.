@@ -11,10 +11,10 @@ export default class extends Controller {
 
     getCountdown();
 
-    const myInterval = setInterval(getCountdown, 500);
+    const myInterval = setInterval(getCountdown, 200);
     // setInterval(function () { getCountdown(); }, 1000);
     clearInterval(myInterval);
-    myInterval = setInterval(getCountdown, 500);
+    myInterval = setInterval(getCountdown, 200);
 
     function getCountdown(){
       const url = window.location.pathname;
@@ -52,3 +52,5 @@ export default class extends Controller {
 
   }
 }
+
+// might be able to get the timer to be consistent if I add a start button to the page which is already loaded
