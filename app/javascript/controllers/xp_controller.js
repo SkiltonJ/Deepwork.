@@ -19,7 +19,8 @@ export default class extends Controller {
     // const sesh = document.querySelector(".sesh");
     const progress = document.getElementById("progress");     //the fill of the xp bar
     const nextLevel = document.getElementById("next-level");       //xp bar text
-    const session = Number(progress.dataset.minutes);          //total mintues in all sessions
+    const session = Number(progress.dataset.minutes);
+    console.log(session);                                                            //total mintues in all sessions
     const user_level = progress.dataset.level;                 //Level of the user
     const level = maxExp[user_level];                          //the max value of the level range
     const nextLevelXP = level - session;                       // the xp left to get to next level

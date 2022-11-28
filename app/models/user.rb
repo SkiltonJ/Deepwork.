@@ -28,7 +28,8 @@ class User < ApplicationRecord
   end
 
   def duration
-    study_sessions.sum(:duration)
+    obj = StudySession.all
+    obj.sum(:duration)
   end
 
   def daily_sessions
