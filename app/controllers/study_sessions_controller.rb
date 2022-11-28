@@ -49,8 +49,6 @@ class StudySessionsController < ApplicationController
     end
   end
 
-
-
   private
 
   def session_params
