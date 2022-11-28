@@ -13,6 +13,9 @@ application.register("countdown-timer", CountdownTimerController)
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
 
+import StudySessionController from "./study_session_controller"
+application.register("study-session", StudySessionController)
+
 import TabController from "./tab_controller"
 application.register("tab", TabController)
 
