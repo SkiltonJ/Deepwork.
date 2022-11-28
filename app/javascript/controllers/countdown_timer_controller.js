@@ -4,6 +4,7 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     console.log("howdy");
+    const url = window.location.pathname;
     let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.1}`); // Need to be able to interpolate in study_duration / pass as argument
     let hours, minutes, seconds; // variables for time units
 
@@ -11,14 +12,12 @@ export default class extends Controller {
 
     getCountdown();
 
-    const myInterval = setInterval(getCountdown, 500);
+    this.myInterval = setInterval(getCountdown, 200);
     // setInterval(function () { getCountdown(); }, 1000);
-    clearInterval(myInterval);
-    myInterval = setInterval(getCountdown, 500);
+    clearInterval(this.myInterval);
+    this.myInterval = setInterval(getCountdown, 200);
 
     function getCountdown(){
-      const url = window.location.pathname;
-      console.log(url)
       // find the amount of "seconds" between now and target
       let current_date = (new Date().getTime() / 1000);
       let seconds_left = (target_date - current_date);
@@ -51,4 +50,9 @@ export default class extends Controller {
 
 
   }
+  disconnect() {
+    clearInterval(this.myInterval)
+  }
 }
+
+// might be able to get the timer to be consistent if I add a start button to the page which is already loaded

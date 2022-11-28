@@ -13,6 +13,9 @@ application.register("countdown-timer", CountdownTimerController)
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
 
+import SessionTimerController from "./session_timer_controller"
+application.register("session-timer", SessionTimerController)
+
 import StudySessionController from "./study_session_controller"
 application.register("study-session", StudySessionController)
 
