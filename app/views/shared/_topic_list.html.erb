@@ -3,7 +3,7 @@
   <div class="topic-items">
       <ul>
         <% @topics.each do |topic|  %>
-          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
+          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration) %> </li>
         <% end %>
       </ul>
     </div>
