@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_24_062505) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_26_113636) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,21 +20,18 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_062505) do
     t.bigint "theme_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "topic_id"
+    t.bigint "topic_id", null: false
     t.index ["theme_id"], name: "index_study_sessions_on_theme_id"
     t.index ["topic_id"], name: "index_study_sessions_on_topic_id"
   end
 
   create_table "themes", force: :cascade do |t|
     t.integer "study_duration"
-    t.integer "block_amount"
-    t.integer "break_duration"
-    t.string "background"
-    t.string "music"
     t.string "name"
-    t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "render"
+    t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_themes_on_user_id"
   end
 
