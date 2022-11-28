@@ -1,5 +1,6 @@
 <div class="timer-container">
   <div id="countdown" data-controller="session-timer" style="opacity: <%=opacity%>">
+    <div class="d-none" id="pass_time"><%= @study_session.theme.study_duration %></div>
     <div id='tiles'></div>
     <div class="labels">
       <li>Hours</li>

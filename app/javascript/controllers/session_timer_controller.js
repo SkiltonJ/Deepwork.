@@ -7,7 +7,8 @@ export default class extends Controller {
 
     let countdown = document.getElementById("tiles"); // get tag element
     const submit = document.getElementById("submit");
-    const modalClose = document.querySelector(".btn-close")
+    const modalClose = document.querySelector(".btn-close");
+    const passTime = document.getElementById("pass_time");
     console.log("submit");
     const end = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
 
@@ -15,9 +16,8 @@ export default class extends Controller {
         event.preventDefault()
         updateSessions(submit)
         modalClose.click()
-        console.log("weasel")
-        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.1}`);
-        let myInterval = setInterval(() => {
+        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * Number(passTime.innerHTML)); // This last value is minutes
+        setInterval(() => {
           getCountdown(target_date)
         }, 200);
     });
