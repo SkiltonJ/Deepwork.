@@ -4,17 +4,17 @@ import { Controller } from "@hotwired/stimulus"
 export default class extends Controller {
   connect() {
     console.log("howdy");
-    let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.2}`); // Need to be able to interpolate in study_duration / pass as argument
+    let target_date = Math.floor(new Date().getTime() / 1000) + (60 * `${0.1}`); // Need to be able to interpolate in study_duration / pass as argument
     let hours, minutes, seconds; // variables for time units
 
     let countdown = document.getElementById("tiles"); // get tag element
 
     getCountdown();
 
-    const myInterval = setInterval(getCountdown, 1000);
+    const myInterval = setInterval(getCountdown, 500);
     // setInterval(function () { getCountdown(); }, 1000);
     clearInterval(myInterval);
-    myInterval = setInterval(getCountdown, 1000);
+    myInterval = setInterval(getCountdown, 500);
 
     function getCountdown(){
       const url = window.location.pathname;
