@@ -21,7 +21,7 @@
   // justify-content: center;
   flex-direction: column;
   background-color: $white;
-  height: 100vh;
+  height: 100%;
 }
 .title-corner {
   display: flex;
@@ -100,19 +100,10 @@
   display: flex;
   justify-content: space-between;
   position: relative;
-  padding-bottom: 20px;
+  padding-bottom: 15px;
   h3 {
     font-family: $zodiak;
     font-weight: 350;
-  }
-  h3:before {
-    position: absolute;
-    content: "";
-    background-color: black;
-    bottom: 25px;
-    height: 1px;
-    width: 220px;
-    border-bottom: 1px solid black;
   }
 }
 .environments {
@@ -128,7 +119,6 @@
   bottom: -10px;
   height: 1px;
   width: 1000px;
-
 }
 // The cards need to be separate for now because static backgrounds
 .template-card-dash {

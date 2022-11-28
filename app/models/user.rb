@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :themes, dependent: :destroy
   has_many :study_sessions, through: :themes
   has_many :topics, dependent: :destroy
-  # validates :first_name, presence: true
+  validates :first_name, presence: true
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
