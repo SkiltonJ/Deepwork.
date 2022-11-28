@@ -25,10 +25,10 @@
       <div class="header-p">
         <h3>Environments</h3>
 
-        <a data-toggle="modal" href="#myModal"><%= link_to theme_study_sessions_path(@themes.first), data: { turbo_method: :post} do %>
+        <%= link_to theme_study_sessions_path(@themes.first), data: { turbo_method: :post} do %>
           <div class="start"> <%= render "components/primary_button_profile" %></div>
         <% end %>
-        </a>
+
 
       </div>
       <div class="environments">

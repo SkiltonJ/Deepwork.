@@ -35,6 +35,11 @@ class StudySessionsController < ApplicationController
     end
   end
 
+  # def update_duration
+  #   @session = StudySession.find(params[:id])
+  #   @duration = StudySession.start_time
+  # end
+
   private
 
   def session_params
