@@ -35,10 +35,21 @@ class StudySessionsController < ApplicationController
     end
   end
 
-  # def update_duration
-  #   @session = StudySession.find(params[:id])
-  #   @duration = StudySession.start_time
-  # end
+  def update_duration
+    @session = StudySession.find(params[:study_session_id])
+    @end_time = Time.now
+    @start_time = @session.updated_at.to_time
+    @end_time = DateTime.now.new_offset(0).to_time
+    @duration = @end_time - @start_time
+    @session.duration = @duration / 60
+    if @session.save
+      redirect_to profile_path
+    else
+      render :back, status: :unprocessable_entity
+    end
+  end
+
+
 
   private
 
