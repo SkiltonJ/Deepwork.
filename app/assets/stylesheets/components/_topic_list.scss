@@ -17,7 +17,9 @@
   // box-shadow: inset 1px 1px 6px 0px rgb(206, 193, 193);
 }
 
-
+.scroll_container {
+  overflow-y: scroll;
+}
 
 .topic-list {
   text-align: center;

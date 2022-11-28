@@ -11,7 +11,6 @@ class PagesController < ApplicationController
     @topics = current_user.topics
     @topic = Topic.new
     @themes = Theme.all # is this accessing the theme templates of the sessions?
-    @themes = current_user.themes
   end
 
   def quickstart

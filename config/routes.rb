@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :themes do
-    resources :study_sessions, only: [:create, :show, :update]
+    resources :study_sessions, only: [:create]
   end
-  get "/study_session/:id", to: "study_sessions#show", as: :study_session
+  resources :study_sessions, only: [:index, :show, :update] do
+    patch "/update_duration", to: "study_sessions#update_duration", as: :update_duration
+  end
+  # get "/study_session/:id", to: "study_sessions#show", as: :study_session
 
-  resources :study_sessions, only: [:index, :show, :update]
   resources :topics, only: [:create, :destroy]
 end

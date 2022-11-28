@@ -3,14 +3,14 @@
   <div class="topic-items">
       <ul>
         <% @topics.each do |topic|  %>
-          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration).sum %> </li>
+          <li> <%= topic.name %> <br> <%= topic.study_sessions.pluck(:duration) %> min</li>
         <% end %>
       </ul>
     </div>
   <div class="topic-list">
     <div class="topic-form">
       <a class="new-item-button" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">add topic</a>
-      <div id="multiCollapseExample1">
+      <div class="collapse" id="multiCollapseExample1">
         <div class="card card-body">
         <%= simple_form_for @topic do |f| %>
         <%= f.input :name %>
@@ -20,8 +20,4 @@
       </div>
     </div>
   </div>
-</div>
-
-<div class="topics-container">
-
 </div>

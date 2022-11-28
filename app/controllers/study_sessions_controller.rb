@@ -4,17 +4,17 @@ class StudySessionsController < ApplicationController
   end
 
   def show
-    @study_session = StudySession.new
+    @study_session = StudySession.find(params[:id])
     @topics = current_user.topics
   end
 
   def create
-    @user = current_user
+    # @user = current_user
     @theme = Theme.find(params[:theme_id])
     @session = StudySession.new
     @session.theme = @theme
     if @session.save
-      redirect_to study_session_path(@session)
+      redirect_to study_session_path(@session, modal_param: true)
     else
       render :back, status: :unprocessable_entity
     end
@@ -29,7 +29,21 @@ class StudySessionsController < ApplicationController
     # @session.user = current_user
     @session.update(session_params)
     if @session.save
-      redirect_to study_session_path(@session)
+      render :ok
+    else
+      render :back, status: :unprocessable_entity
+    end
+  end
+
+  def update_duration
+    @session = StudySession.find(params[:study_session_id])
+    @end_time = Time.now
+    @start_time = @session.updated_at.to_time
+    @end_time = DateTime.now.new_offset(0).to_time
+    @duration = @end_time - @start_time
+    @session.duration = @duration / 60
+    if @session.save
+      redirect_to profile_path
     else
       render :back, status: :unprocessable_entity
     end
@@ -38,6 +52,27 @@ class StudySessionsController < ApplicationController
   private
 
   def session_params
-    params.require(:study_session).permit(:intention, :topic_id)
+    params.require(:study_session).permit(:intention, :theme_id, :topic_id) #tried theme_id in params - no good
   end
 end
+
+# @session = StudySession.new(params[:theme_id])
+# results in...
+# When assigning attributes, you must pass a hash as an argument, String passed.
+# {"theme_id"=>"7"}
+
+
+# @session.update_attribute(:theme_id)
+# results in...
+# When assigning attributes, you must pass a hash as an argument, Symbol passed.
+
+
+
+# Parameters: {"theme_id"=>"7"}
+# if this is a hash then
+
+
+    # @theme = Theme.find(params[:id])
+    # @session = StudySession.new
+    # @session.them_id = @theme
+    # the above still results in ActiveRecord::RecordNotFound (Couldn't find Theme without an ID):

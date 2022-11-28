@@ -24,3 +24,10 @@
 #   topic.save
 #   puts "Created #{topic.name}"
 # end
+
+puts "Destroying themes"
+Theme.destroy_all
+
+Theme.create(name: "quickstart", study_duration: 30, render: "themes/snow_theme", thumbnail: "assets/background_snap.png")
+
+# When creating a new theme, add render: "<filename.html.erb>"" and thumbnail: "image you used as your background".
