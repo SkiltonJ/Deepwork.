@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_24_062505) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_032717) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -27,9 +27,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_24_062505) do
 
   create_table "themes", force: :cascade do |t|
     t.integer "study_duration"
-    t.integer "block_amount"
-    t.integer "break_duration"
-    t.string "background"
     t.string "music"
     t.string "name"
     t.bigint "user_id", null: false

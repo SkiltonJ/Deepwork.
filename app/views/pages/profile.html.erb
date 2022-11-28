@@ -6,7 +6,7 @@
       </div>
       <div class="profile-bar">
         <p class="avatar"></p>
-        <h4> <%= current_user.first_name.capitalize %>  <%= current_user.last_name.capitalize %> </h4>
+        <h4> <%= current_user.first_name.capitalize %> <%= current_user.last_name.capitalize %>  </h4>
         <p>Level 2</p>
       </div>
       <div class="tabs" data-controller="tab">
@@ -29,16 +29,11 @@
         <% end %>
       </div>
       <div class="environments">
-        <div class="template-card-dash">
-        </div>
-        <div class="template-card-dash-2">
-        </div>
-        <div class="template-card-dash-3">
-        </div>
-        <div class="template-card-dash-4">
-        </div>
+        <%= render "shared/template_card_profile" %>
       </div>
     </div>
+
+
     <div class="p-column-container" data-controller="tab">
       <div class="center-p tab-content" id="v-pills-tabContent">
         <div class="tab-pane fade show active" id="v-pills-stats" role="tabpanel" aria-labelledby="v-pills-stats-tab">Put stats here <%= render "shared/stats_new" %> </div>
