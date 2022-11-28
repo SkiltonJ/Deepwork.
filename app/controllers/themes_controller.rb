@@ -26,6 +26,6 @@ class ThemesController < ApplicationController
   private
 
   def theme_params
-    params.require(:theme).permit(:study_duration, :block_amount, :break_duration, :background, :music, :name)
+    params.require(:theme).permit(:study_duration, :name)
   end
 end
