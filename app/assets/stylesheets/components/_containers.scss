@@ -11,8 +11,16 @@
 }
 
 .bg-video {
-  height: 100%;
+  height: 114vh;
+  width: 100vw;
+  position: absolute;
+}
 
+.youtube {
+  position: relative;
+    top: 432px;
+    border-radius: 5px;
+    left: 687px;
 }
 
 .profile_left {
