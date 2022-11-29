@@ -18,4 +18,8 @@ class PagesController < ApplicationController
 
   def tease
   end
+
+  def creation
+    @themes = Theme.all #use this to get theme access when building theme
+  end
 end
