@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_061530) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_28_075357) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_061530) do
     t.bigint "theme_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "topic_id"
+    t.bigint "topic_id", null: false
     t.index ["theme_id"], name: "index_study_sessions_on_theme_id"
     t.index ["topic_id"], name: "index_study_sessions_on_topic_id"
   end
@@ -34,6 +34,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_061530) do
     t.datetime "updated_at", null: false
     t.string "render"
     t.string "thumbnail"
+    t.string "video"
     t.index ["user_id"], name: "index_themes_on_user_id"
   end
 
