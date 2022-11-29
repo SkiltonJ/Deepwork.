@@ -55,7 +55,7 @@
     font-size: 22px;
   }
   span {
-    color: $navy-blue;
+    color: $smoke-grey;
     font-weight: 500;
   }
 }
@@ -92,7 +92,7 @@
     font-size: 18px;
   }
       span {
-    color: $navy-blue;
+    color: #2F004F;
     font-weight: 500;
   }
 }
@@ -159,7 +159,7 @@
     font-weight: 300;
   }
   span {
-    color: $navy-blue;
+    color: $smoke-grey;
     padding-right: 5px;
     font-weight: 500;
   }
@@ -194,20 +194,21 @@
     // border-bottom: 1px solid black;
     text-decoration: none;
     color: black;
-    font-size: 28px;
+    opacity: 1;
+    font-size: 32px;
     transition: .4s;
     animation-direction: reverse;
     &:hover {
       color: $smoke-grey;
       transition: .6s;
     }
-    &:hover::before {
+    &::after {
       transition: .4s;
-      animation: slideright .4s linear forwards;
+      animation: slideleft .5s linear forwards, slidedown .5s linear .7s forwards;
     }
-    &:hover::after {
+    &::before {
       transition: .4s;
-      animation: slideleft .4s linear forwards;
+      animation: fadein .6s linear .7s forwards;
     }
   }
 }
@@ -217,41 +218,49 @@
   // width: 15px;
   height: 1px;
   top: -7px;
-  left: 165px;
-  background-color: black;
+  left: 175px;
+  background-color: #2F004F;
 }
-
 .button-home::before {
   content: '';
   position: absolute;
-  // width: 165px;
-  height: 1px;
-  top: 49px;
+  width: 170px;
+  height: 50px;
+  top: -5px;
   left: 0px;
-  background-color: black;
+  background-color: $light-gray;
+
+  // box-shadow: 10px 0px 0px 0px black;
 }
-
-
-
+// animation for button
 @keyframes slideleft {
   0% {
-    // left: -px;
+    left: 170px;
     width: 0px;
   }
   100% {
-    width: 165px;
     left: 0px;
-    // color: $white;
+    width: 180px;
   }
 }
 
-@keyframes slideright {
+@keyframes slidedown {
   0% {
     left: 0px;
-    width: 0px;
+    width: 180px;
   }
   100% {
-    width: 165px;
-    // color: $white;
+    width: 180px;
+    top: 47px;
+  }
+}
+@keyframes fadein {
+  0% {
+    height: 50px;
+    top: -5px;
+  }
+  100% {
+    height: 0px;
+    top: 50px;
   }
 }

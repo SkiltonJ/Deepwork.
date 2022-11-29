@@ -141,53 +141,8 @@
   width: 40px;
 }
 
-.nav-sign-up-landing {
-  font-weight: 500;
-  font-size: 15px;
-  padding-left: 40px;
-  padding-right: 40px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  color: #232D34;
-  font-family: $satoshi;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 25px;
-  &:hover {
-    transition: .3s;
-    font-size: 17px;
-    border-radius: 5px;
-    background-color: white;
-    color: #232D34
-  }
 
-}
-.nav-login-landing {
-  font-size: 15px;
-  font-weight: 600;
-  background-color: none;
-  padding-left: 46px;
-  padding-right: 46px;
-  padding-top: 13px;
-  padding-bottom: 13px;
-  color: #232D34;
-  font-family: $satoshi;
-  border-radius: 5px;
-  text-decoration: none;
-  margin-left: 4px;
-  margin-right: 4px;
-  border-radius: 5px;
-  &:hover {
-    color: white;
-    transition: .3s;
-    font-size: 17px;
-    background-color: #81D6E9;
-    border-radius: 5px;
-  }
 
-}
 .navbar-header-landing {
   font-size: 15px;
   font-weight: 600;
