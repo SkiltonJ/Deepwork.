@@ -7,10 +7,10 @@
 }
 .nav-contents {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 20px 20px 15px 20px;
+  padding: 20px 80px 15px 80px;
 }
 .nav-left {
   h4 {
@@ -21,8 +21,9 @@
     text-decoration: none;
     color: black;
     font-weight: 400;
+    // margin-right: 150px;
     &:hover {
-      color: $white;
+      color: $black;
       background-color: transparent;
     }
   }
@@ -35,4 +36,25 @@
 }
 .nav-right {
   display: flex;
+}
+.nav-login-landing {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $black;
+  margin: 0px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  &:hover {
+    color: $smoke-grey;
+  }
+}
+.nav-sign-up-landing {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: $black;
+  border: 1px solid black;
+  border-radius: 5px;
+  &:hover {
+    color: $smoke-grey;
+  }
 }

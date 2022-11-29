@@ -20,7 +20,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_061530) do
     t.bigint "theme_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "topic_id", null: false
+    t.bigint "topic_id"
     t.index ["theme_id"], name: "index_study_sessions_on_theme_id"
     t.index ["topic_id"], name: "index_study_sessions_on_topic_id"
   end
