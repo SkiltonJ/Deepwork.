@@ -4,9 +4,26 @@
   display: flex;
   justify-content: space-between;
 }
+.container-theme {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bg-video {
+  height: 114vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.youtube {
+  position: relative;
+    top: 432px;
+    border-radius: 5px;
+    left: 687px;
+}
 
 .profile_left {
-
   height: 94%;
 }
 
