@@ -1,4 +1,10 @@
-
+<div class="parent">
   <%= video_tag "final 1 10 MB.mp4", autoplay: :autoplay, loop: :loop, muted: :muted, class: "bg-video" %>
   <iframe class="youtube" width="140" height="90  " src="https://www.youtube.com/embed/Mnt4VO9uH1E?rel=0&modestbranding=1&autohide=1&mute=0&showinfo=0&controls=0&autoplay=1" frameborder="0" allowfullscreen></iframe>
-  <%= render "components/countdown_timer", opacity: 0.65 %>
+  <%= render "components/session_timer", opacity: 0.65 %>
+</div>
+
+<div style="position: relative">
+  <div class="children" style="position: absolute, top: 50"></div>
+</div>
+
