@@ -21,6 +21,7 @@ class PagesController < ApplicationController
     end
     # @last_theme = Theme.third
     @themes_reverse = @themes.reverse
+    @vibes = ["tranquil", "nature", "calming", "deep", "intense"]
   end
 
   def quickstart
