@@ -142,11 +142,12 @@
 
 .leave-button {
   text-decoration: none;
+  font-family: $satoshi;
   width: fit-content;
   background: $white;
   opacity: 50%;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   color: $primary-text;
   position: absolute;
     top: 90vh;
