@@ -13,6 +13,7 @@ class PagesController < ApplicationController
     @themes = Theme.all # is this accessing the theme templates of the sessions?
     @last_theme = Theme.second
     @themes_reverse = @themes.reverse
+    @vibes = ["tranquil", "nature", "calming", "deep", "intense"]
   end
 
   def quickstart

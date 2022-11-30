@@ -1,0 +1,69 @@
+// OTHER POMODORO TIMER TO TRY AND INTEGRATE
+
+#container-time{
+  // border:1px solid #333;
+  // border-radius :20px;
+  width:500px;
+  // margin:20px auto;
+  padding:10px;
+  text-align:center;
+  // background-color: rgba(0, 0, 0, 0.272);
+}
+
+#timer-2{
+  color:white;
+  font-size:50px;
+  margin:10px auto;
+  border : 1px solid white;
+  border-radius:50%;
+  width:250px;
+  height:250px;
+  overflow:hidden;
+  position:relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor:default;
+  background-color: rgba(0, 0, 0, 0.293);
+}
+
+#time-2{
+  margin-top:80px;
+  z-index : 1;
+  position:relative;
+}
+
+#filler-2{
+  background : #6e6e6e;
+  height: 0px;
+  width: 200px;
+  position:absolute;
+  bottom:0;
+}
+
+#buttons-2 button {
+  background:transparent;
+  border: 1px solid white;
+  color:#fff;
+  cursor:pointer;
+  padding:5px;
+  width:150px;
+  margin:10px auto;
+  font-size:16px;
+  height : 50px;
+  border-radius : 50px;
+  background-color: rgba(0, 0, 0, 0.293);
+}
+
+#buttons button#shortBreak{
+  background : #0c0;
+}
+
+#buttons button#longBreak{
+  background : #080;
+}
+
+#buttons button#stop{
+  background : #f00;
+}
