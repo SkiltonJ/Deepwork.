@@ -31,7 +31,7 @@ class StudySessionsController < ApplicationController
     # @session.user = current_user
     @session.update(session_params)
     if @session.save
-      render :ok
+      render head: :ok
     else
       render :back, status: :unprocessable_entity
     end
