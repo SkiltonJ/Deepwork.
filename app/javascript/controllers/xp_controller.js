@@ -60,7 +60,7 @@ export default class extends Controller {
         progress.style.width = `${xp}%`;
         progress.style.backgroundColor = "cyan";
       }
-      nextLevel.innerHTML = `${nextLevelXP} XP Till Next Level`;
+      nextLevel.innerHTML = `${nextLevelXP} minutes to next level`;
     }
 
     // setInterval(updateCounters, 2000);

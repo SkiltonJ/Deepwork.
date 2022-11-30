@@ -11,6 +11,10 @@ class PagesController < ApplicationController
     @topics = current_user.topics
     @topic = Topic.new
     @themes = Theme.all # is this accessing the theme templates of the sessions?
+    @last_theme = StudySession.last.theme
+    @number_of_sessions = current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").count
+    @week_sessions = current_user.study_sessions.group_by_week(:created_at).count.values[0]
+    @week_minutes = current_user.study_sessions.group_by_week(:created_at).sum(:duration).values[0]
     if current_user.study_sessions.empty?
       @last_theme = Theme.third
     else
