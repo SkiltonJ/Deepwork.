@@ -11,7 +11,7 @@
 }
 
 .bg-video {
-  height: 114vh;
+  height: 100vh;
   width: 100vw;
   position: absolute;
 }
@@ -24,7 +24,7 @@
 }
 .bg-video3 {
   height: 113vh;
-  width: 100vw;
+  width: 100%;
   position: absolute;
   margin-top: -20px;
 
@@ -32,9 +32,12 @@
 
 .youtube {
   position: relative;
-    top: 432px;
-    border-radius: 5px;
-    left: 687px;
+    // top: 432px;
+    // border-radius: 5px;
+    // left: 687px;
+  z-index: 10;
+  top: 10em;
+  left: 20px;
 }
 
 .youtube2 {
