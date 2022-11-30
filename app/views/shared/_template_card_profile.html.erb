@@ -2,6 +2,7 @@
 <% @themes.first(4).each do |theme| %>
   <%= link_to theme_study_sessions_path(theme), data: { turbo_method: :post } do %>
     <div class="template-card-dash-2" style="background-image: url(<%=theme.thumbnail%>);">
+      <p><%= theme.study_duration %> min</p>
     </div>
   <% end %>
 <% end %>
