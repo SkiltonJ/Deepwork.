@@ -1,9 +1,19 @@
-<%# Partial that is rendered into the tab on the profile dashboard %>
-<div class="theme-container">
-  <div class="theme-content">
-    <% @themes.each do |theme| %>
-      <h3><%= link_to theme.name, theme_study_sessions_path(theme), data: { turbo_method: :post }, class: "index-list" %></h2>
-      <div class="template-card-dash-2"></div>
-    <% end %>
+<%# Partial that is rendered into the tab on the profile dashboard for the total list of themes %>
+
+<div class="tab-container">
+<% @themes_reverse.each do |theme| %>
+  <div class="environments-container">
+    <div class="template-card-dash-2" style="background-image: url(<%=theme.thumbnail%>);">
+    </div>
+    <div class="envr-content">
+      <div class="envr-title">
+        <h4><%= theme.name.capitalize %></h4>
+      </div>
+      <div class="description">
+        <p>Duration: <%= theme.study_duration %> minute session</p>
+        <p>Vibes: Sick</p>
+      </div>
+    </div>
   </div>
+<% end %>
 </div>

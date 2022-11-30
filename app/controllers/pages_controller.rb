@@ -17,6 +17,7 @@ class PagesController < ApplicationController
       @last_theme = current_user.study_sessions.last.theme   # this only works if a study session exists,m otherwise it breaks
     end
     # @last_theme = Theme.third
+    @themes_reverse = @themes.reverse
   end
 
   def quickstart
