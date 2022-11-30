@@ -8,16 +8,16 @@ export default class extends Controller {
     let countdown = document.getElementById("tiles"); // get tag element
     const submit = document.getElementById("submit");
     const modalClose = document.querySelector(".btn-close");
-    const passTime = document.getElementById("pass_time");
+    const passTime = document.getElementById("pass-time");
     const leaveSession = document.getElementById("leave-session")
-    console.log("submit");
+    console.log(passTime)
     const end = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
 
     submit.addEventListener('submit', (event) => {
         event.preventDefault()
         updateSessions(submit)
         modalClose.click()
-        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * 0.1); // This last value is minutes
+        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * Number(passTime)); // This last value is minutes
 
         this.hehe = setInterval(() => {
           getCountdown(target_date)
