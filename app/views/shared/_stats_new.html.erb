@@ -1,16 +1,19 @@
 <div class="stats-container-2">
   <div class="xp-container" data-controller="xp">
     <div class="stats-bar">
-      <p class="progress-text-2">Total Minutes Focused</p>
+      <p class="progress-text-2">Your total Deepwork time is <%= current_user.duration %> minutes</p>
       <div class="progress">
       <p id="next-level"><%= current_user.duration %></p>
         <div class="progress-fill-1-new" id="progress" data-minutes="<%= current_user.duration %>" data-level="<%= current_user.current_level %>">
         </div>
       </div>
-      <p class="progress-bar-text"><%= current_user.duration %> minutes - Level <%= current_user.current_level %></p>
+      <p class="progress-bar-text"> Level <%= current_user.current_level %></p>
     </div>
     <%# Create new chart for daily minutes and session amounts %>
-    <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration) %>
+    <div class="chart">
+      <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration), colors: ["#d4af37"], ytitle: "Deepwork minutes" %>
+    </div>
+
     <p> <%= current_user.daily_sessions %> Sessions Today</p>
     <p><%= current_user.daily_session_total_time %> Minutes today</p>
   </div>
