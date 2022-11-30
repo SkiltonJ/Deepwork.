@@ -24,7 +24,6 @@ export default class extends Controller {
 
     });
 
-
     const getCountdown = (target_date) => {
       if(document.baseURI !== "http://localhost:3000/profile"){
 

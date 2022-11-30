@@ -2,7 +2,7 @@ class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   has_many :themes, dependent: :destroy
-  has_many :study_sessions, through: :themes
+  has_many :study_sessions
   has_many :topics, dependent: :destroy
   validates :first_name, presence: true
 
@@ -28,7 +28,7 @@ class User < ApplicationRecord
   end
 
   def duration
-    obj = StudySession.all
+    obj = self.study_sessions
     obj.sum(:duration)
   end
 
