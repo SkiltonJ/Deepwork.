@@ -22,8 +22,11 @@
   // justify-content: center;
   flex-direction: column;
   background-color: $white;
-
+  height: 100vh;
+  position: sticky;
+  top: 0;
 }
+
 .title-corner {
   display: flex;
   justify-content: center;
