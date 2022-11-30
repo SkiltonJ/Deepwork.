@@ -143,7 +143,7 @@
 .leave-button {
   text-decoration: none;
   width: fit-content;
-  background: orange;
+  background: $white;
   opacity: 50%;
   padding: 5px 10px;
   border-radius: 5px;
@@ -154,5 +154,9 @@
   a {
     color: $primary-text;
     text-decoration: none;
+  }
+
+  &:hover {
+    scale: 1.05;
   }
 }
