@@ -4,9 +4,55 @@
   display: flex;
   justify-content: space-between;
 }
+.container-theme {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.bg-video {
+  height: 114vh;
+  width: 100vw;
+  position: absolute;
+}
+
+.bg-video2 {
+  height: 114vh;
+  width: 100vw;
+  position: absolute;
+  margin-top: -100px;
+}
+.bg-video3 {
+  height: 113vh;
+  width: 100vw;
+  position: absolute;
+  margin-top: -20px;
+
+}
+
+.youtube {
+  position: relative;
+    top: 432px;
+    border-radius: 5px;
+    left: 687px;
+}
+
+.youtube2 {
+  position: relative;
+    top: 197px;
+    border-radius: 5px;
+    left: 96px;
+}
+
+.youtube2 {
+  position: relative;
+    top: 320px;
+    border-radius: 5px;
+    left: 585px;
+}
+
 
 .profile_left {
-
   height: 94%;
 }
 

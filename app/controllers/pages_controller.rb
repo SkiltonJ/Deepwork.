@@ -11,11 +11,16 @@ class PagesController < ApplicationController
     @topics = current_user.topics
     @topic = Topic.new
     @themes = Theme.all # is this accessing the theme templates of the sessions?
+    @last_theme = StudySession.last.theme
   end
 
   def quickstart
   end
 
   def tease
+  end
+
+  def creation
+    @themes = Theme.all #use this to get theme access when building theme
   end
 end
