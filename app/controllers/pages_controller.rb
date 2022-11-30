@@ -14,6 +14,7 @@ class PagesController < ApplicationController
     @last_theme = StudySession.last.theme
     @number_of_sessions = current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").count
     @week_sessions = current_user.study_sessions.group_by_week(:created_at).count.values[0]
+    @week_minutes = current_user.study_sessions.group_by_week(:created_at).sum(:duration).values[0]
   end
 
   def quickstart
