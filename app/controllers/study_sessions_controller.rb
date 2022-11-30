@@ -14,6 +14,7 @@ class StudySessionsController < ApplicationController
     @theme = Theme.find(params[:theme_id])
     @session = StudySession.new
     @session.theme = @theme
+    @session.user = current_user
     if @session.save
       redirect_to study_session_path(@session, modal_param: true)
     else

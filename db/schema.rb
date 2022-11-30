@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_11_28_075357) do
+ActiveRecord::Schema[7.0].define(version: 2022_11_29_091555) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,8 +21,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_075357) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "topic_id"
+    t.bigint "user_id", null: false
     t.index ["theme_id"], name: "index_study_sessions_on_theme_id"
     t.index ["topic_id"], name: "index_study_sessions_on_topic_id"
+    t.index ["user_id"], name: "index_study_sessions_on_user_id"
   end
 
   create_table "themes", force: :cascade do |t|
@@ -62,6 +64,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_28_075357) do
 
   add_foreign_key "study_sessions", "themes"
   add_foreign_key "study_sessions", "topics"
+  add_foreign_key "study_sessions", "users"
   add_foreign_key "themes", "users"
   add_foreign_key "topics", "users"
 end
