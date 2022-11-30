@@ -11,7 +11,11 @@ class PagesController < ApplicationController
     @topics = current_user.topics
     @topic = Topic.new
     @themes = Theme.all # is this accessing the theme templates of the sessions?
-    # @last_theme = StudySession.last.theme   # this only works if a study session exists,m otherwise it breaks
+    # if current_user.study_sessions.empty?
+    #   @last_theme = Theme.third
+    # else
+    # @last_theme = current_user.study_sessions.last.theme   # this only works if a study session exists,m otherwise it breaks
+    # end
     @last_theme = Theme.third
   end
 

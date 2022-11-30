@@ -1,5 +1,4 @@
-
-<div data-controller="session-timer">
+<div>
   <%= render @study_session.theme.render%>
   <div>
     <%= link_to "Leave Session Early", study_session_update_duration_path(@study_session, modal_param: true),  data: { turbo_method: :patch}, id: "leave-session" %>

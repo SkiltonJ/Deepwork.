@@ -9,8 +9,10 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Session complete</h1>
+        <%= link_to profile_path do %>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <% end %>
       </div>
       <div class="modal-body">
         <p>Great session! what would you like to do next?</p>
