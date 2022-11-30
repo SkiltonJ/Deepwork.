@@ -10,6 +10,7 @@
       <p class="progress-bar-text"><%= current_user.duration %> minutes - Level <%= current_user.current_level %></p>
     </div>
     <%# Create new chart for daily minutes and session amounts %>
+    <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration) %>
     <p> <%= current_user.daily_sessions %> Sessions Today</p>
     <p><%= current_user.daily_session_total_time %> Minutes today</p>
   </div>

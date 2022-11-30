@@ -39,7 +39,7 @@ export default class extends Controller {
       countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
 
       if (seconds_left < 0) {
-        countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
+        countdown.innerHTML = end
         window.location.href = ('/profile');
       }
     }
