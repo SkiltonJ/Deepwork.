@@ -1,43 +1,49 @@
-.bg-video1 {
-  height: 114vh;
-  width: 100vw;
-  position: absolute;
+.bg-video {
+  position: fixed;
 }
 
 .bg-video2 {
-  height: 114vh;
-  width: 100vw;
-  position: absolute;
-  margin-top: -100px;
+  position: fixed;
 }
 .bg-video3 {
-  height: 113vh;
-  width: 100vw;
-  position: absolute;
-  margin-top: -20px;
+  position: fixed;
+}
 
+.parent {
+  position: relative;
 }
 
 .youtube {
   position: absolute;
-    top: 432px;
+    top: 58vh;
     border-radius: 5px;
-    left: 687px;
+    left: 45.5vw;
 }
 
 .youtube2 {
-  position: relative;
-    top: 197px;
+  position: absolute;
+    top: 33vh;
     border-radius: 5px;
-    left: 96px;
+    left: 6vw;
+    opacity: 0.7;
 }
 
-.youtube2 {
-  position: relative;
-    top: 320px;
+.youtube3 {
+  position: absolute;
+    top: 43vh;
     border-radius: 5px;
-    left: 585px;
+    left: 39vw;
+    opacity: 0.7;
 }
+
+.youtube4 {
+  position: absolute;
+    top: 6vh;
+    border-radius: 5px;
+    left: 5vw;
+    opacity: 0.5;
+}
+
 
 .leave-button {
   position: relative;

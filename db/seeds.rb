@@ -28,7 +28,7 @@
 puts "Destroying themes"
 Theme.destroy_all
 
-Theme.create(name: "Baroque Forest", study_duration: 25, render: "themes/theme_4", thumbnail: "assets/brown_thumbnail.png");
+Theme.create(name: "Baroque Forest", study_duration: 25, render: "themes/theme_4", thumbnail: "assets/wave_forest_thumbnail.png");
 Theme.create(name: "Gamma", study_duration: 25, render: "themes/theme_1", thumbnail: "assets/gamma_thumbnail.png");
 Theme.create(name: "Baroque", study_duration: 25, render: "themes/theme_2", thumbnail: "assets/baroque_thumbnail.png");
 Theme.create(name: "Browne", study_duration: 25, render: "themes/theme_3", thumbnail: "assets/brown_thumbnail.png");
