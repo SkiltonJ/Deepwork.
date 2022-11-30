@@ -17,7 +17,7 @@ export default class extends Controller {
         event.preventDefault()
         updateSessions(submit)
         modalClose.click()
-        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * Number(passTime)); // This last value is minutes
+        let target_date = Math.floor(new Date().getTime() / 1000) + (60 * Number(passTime.innerHTML)); // This last value is minutes
 
         this.hehe = setInterval(() => {
           getCountdown(target_date)
