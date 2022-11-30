@@ -10,19 +10,20 @@
       <p class="progress-bar-text"> Level <%= current_user.current_level %></p>
     </div>
     <div>
-      <h4><%= @week_sessions %> Deepwork sessions this week</h4>
-      <h4> <%= @week_minutes %> Deepwork minutes this week </h4>
+      <h4 class="text-center"> <%= @week_minutes %> Deepwork minutes this week </h4>
     </div>
     <%# Create new chart for daily minutes and session amounts %>
     <div class="chart">
-      <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration), colors: ["#0f8b8b"], ytitle: "Deepwork minutes" %>
-      <p class="text-center"><%= current_user.daily_session_total_time %> Minutes today</p>
+      <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration), colors: ["#0f8b8b"], ytitle: "Deepwork minutes", max: 300 %>
+      <%# <p class="text-center"><%= current_user.daily_session_total_time %>
     </div>
-
+<br>
+<br>
 
      <div class="chart">
-      <%= line_chart @number_of_sessions, colors: ["#0f8b8b"], ytitle: "Deepwork sessions" %>
-      <p class="text-center"> <%= current_user.daily_sessions %> Sessions Today</p>
+      <h4 class="text-center"><%= @week_sessions %> Deepwork sessions this week</h4>
+      <%= line_chart @number_of_sessions, colors: ["#0f8b8b"], ytitle: "Deepwork sessions", max: 10 %>
+      <%# <p class="text-center"> <%= current_user.daily_sessions %>
     </div>
   </div>
 </div>
