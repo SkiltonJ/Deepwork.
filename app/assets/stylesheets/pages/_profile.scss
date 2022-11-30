@@ -49,7 +49,7 @@
   flex-direction: column;
   align-items: center;
   margin: 20px 10px 10px 10px;
-  border-bottom: 1px solid $smoke-grey;
+  border-bottom: 1px solid #0f8b8b;
 }
 .top-section {
   position: relative;
@@ -60,7 +60,7 @@
   position: absolute;
   height: 100%;
   width: 1px;
-  background-color: $black;
+  background-color: #0f8b8b;
   left: -10px;
   top: 20px;
 }
@@ -134,7 +134,7 @@
 .environments::before {
   content: '';
   position: absolute;
-  background-color: black;
+  background-color: #0f8b8b;
   bottom: -10px;
   height: 1px;
   width: 97%;
