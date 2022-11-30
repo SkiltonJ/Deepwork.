@@ -11,7 +11,8 @@ class PagesController < ApplicationController
     @topics = current_user.topics
     @topic = Topic.new
     @themes = Theme.all # is this accessing the theme templates of the sessions?
-    @last_theme = StudySession.last.theme
+    # @last_theme = StudySession.last.theme   # this only works if a study session exists,m otherwise it breaks
+    @last_theme = Theme.third
   end
 
   def quickstart

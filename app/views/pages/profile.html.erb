@@ -27,7 +27,7 @@
         <div>
         <%= render "shared/session_end_form" %>
         </div>
-        <%= link_to theme_study_sessions_path(@themes.first), data: { turbo_method: :post} do %>
+        <%= link_to theme_study_sessions_path(@themes.third), data: { turbo_method: :post} do %>
           <div class="start"> <%= render "components/primary_button_profile" %></div>
         <% end %>
 
