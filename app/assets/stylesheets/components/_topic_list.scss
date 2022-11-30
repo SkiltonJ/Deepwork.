@@ -21,9 +21,12 @@
 .topic-list {
   text-align: center;
   align-items: center;
+  // position: relative;
 }
 
+
 .topic-heading {
+  margin-top: 20px;
   font-size: 32px;
   padding-left: 20px;
   padding-right: 20px;
