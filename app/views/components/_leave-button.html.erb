@@ -1,0 +1,3 @@
+<div class="leave-button">
+  <%= link_to "Leave Session Early", study_session_update_duration_path(@study_session, modal_param: true),  data: { turbo_method: :patch}, id: "leave-session" %>
+</div>
