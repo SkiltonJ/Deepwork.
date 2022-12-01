@@ -7,6 +7,7 @@ class StudySessionsController < ApplicationController
     @study_session = StudySession.find(params[:id])
     @topics = current_user.topics
     @theme = @study_session.theme
+    @loading_greetings = ["Constructing your environment", "Prepare for focus", "Initializing your atmosphere", "Prepare your mind"]
   end
 
   def create
