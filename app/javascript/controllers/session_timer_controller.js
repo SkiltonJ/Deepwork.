@@ -49,10 +49,6 @@ export default class extends Controller {
           countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
           clearInterval(this.hehe)
           leaveSession.click()
-          clearInterval(this.hehe)
-          setTimeout(function () {
-            console.log('waiting....');
-          }, 2000);
         }
       }
     }
