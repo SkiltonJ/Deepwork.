@@ -2,6 +2,8 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="session-timer"
 export default class extends Controller {
+  static targets = ["intention"]
+
   connect() {
     let hours, minutes, seconds; // variables for time units
 
@@ -65,5 +67,11 @@ export default class extends Controller {
     }
 
 
+  }
+
+  showIntention(event) {
+    console.dir(event.target[3].value)
+    console.log(this.intentionTarget)
+    this.intentionTarget.innerHTML = event.target[3].value
   }
 }
