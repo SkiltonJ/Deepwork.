@@ -10,13 +10,13 @@
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel"></h1>
+      <div class="modal-header text-center">
+        <h1 class="modal-title fs-5 w-100" id="staticBackdropLabel">Time to focus</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <%= simple_form_for @study_session, method: :patch, html: { id:"submit", data: {action: "submit->session-timer#showIntention"} } do |f| %>
-          <%= f.input :topic_id, collection: current_user.topics %>
+          <%= f.input :topic_id, prompt: "Choose a topic", collection: current_user.topics %>
           <%= f.input :intention, placeholder: "Your first task for this session"%>
           <%= f.button :submit, "Submit", class:"new-item-button" %>
         <% end %>
