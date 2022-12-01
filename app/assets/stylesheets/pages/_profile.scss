@@ -49,7 +49,13 @@
   flex-direction: column;
   align-items: center;
   margin: 20px 10px 10px 10px;
-  border-bottom: 1px solid $smoke-grey;
+  border-bottom: 1px solid #0f8b8b;
+  font-family: $satoshi;
+  h4 {
+    font-family: $satoshi;
+    font-weight: 400;
+    font-size: 28px;
+  }
 }
 .top-section {
   position: relative;
@@ -60,7 +66,7 @@
   position: absolute;
   height: 100%;
   width: 1px;
-  background-color: $black;
+  background-color: #0f8b8b;
   left: -10px;
   top: 20px;
 }
@@ -68,6 +74,8 @@
 .nav {
   padding: 15px 0px 15px 5px;
   align-items: center;
+  font-family: $satoshi;
+  font-size: 18px;
   a {
     position: relative;
     padding: 15px 0px 15px 5px;
@@ -123,6 +131,7 @@
   h3 {
     font-family: $zodiak;
     font-weight: 350;
+    font-size: 26px;
   }
 }
 .environments {
@@ -130,11 +139,14 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   margin-bottom: 10px;
+  a {
+    text-decoration: none;
+  }
 }
 .environments::before {
   content: '';
   position: absolute;
-  background-color: black;
+  background-color: #0f8b8b;
   bottom: -10px;
   height: 1px;
   width: 97%;
@@ -156,4 +168,27 @@
   background-repeat: no-repeat;
   border-radius: 10px;
   margin-bottom: 20px;
+  // position: relative;
+  transition: .3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  p {
+    opacity: 0;
+  }
+  &:hover {
+    p {
+      text-decoration: none;
+      transition: .3s;
+      text-align: center;
+      opacity: 1;
+      font-size: 32px;
+      font-family: $satoshi;
+      background-color: #f4f4f4ce;
+      width: 300px;
+      height: 50px;
+      color: rgb(28, 28, 28);
+    }
+  }
 }

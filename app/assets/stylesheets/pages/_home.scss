@@ -165,8 +165,8 @@
   }
 }
 .right {
-  padding-top: 25%;
-  margin-bottom: 30px;
+  padding-top: 28%;
+  margin-bottom: 0px;
 }
 .left {
   margin-bottom: 30px;
@@ -178,6 +178,28 @@
 }
 
 
+// image for environment #2 section
+.profile-environment {
+  margin-top: 20px;
+  background-image: url("assets/mountain");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 300px;
+  border-radius: 25px;
+}
+
+// image for stats section #3
+.stats-img {
+  margin-top: 20px;
+  background-image: url("assets/stats_screenshot");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 400px;
+  height: 300px;
+  border-radius: 25px;
+  border: 1px solid $smoke-grey;
+}
 
 // Button on homepage that we can mess around with
 .cta {
