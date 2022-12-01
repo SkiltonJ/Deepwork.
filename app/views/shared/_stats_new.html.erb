@@ -14,7 +14,7 @@
     </div>
     <%# Create new chart for daily minutes and session amounts %>
     <div class="chart">
-      <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration), colors: ["#0f8b8b"], ytitle: "Deepwork minutes", max: 300 %>
+      <%= column_chart current_user.study_sessions.group_by_day_of_week(:created_at, format: "%a").sum(:duration), colors: ["#0f8b8b"], ytitle: "Deepwork minutes", max: @week_minutes_max %>
       <%# <p class="text-center"><%= current_user.daily_session_total_time %>
     </div>
 <br>
@@ -22,8 +22,9 @@
 
      <div class="chart">
       <h4 class="text-center" id="titles"><%= @week_sessions %> Deepwork sessions this week</h4>
-      <%= line_chart @number_of_sessions, colors: ["#0f8b8b"], ytitle: "Deepwork sessions", max: 10 %>
+      <%= line_chart @number_of_sessions, colors: ["#0f8b8b"], ytitle: "Deepwork sessions", max: @week_sessions_max %>
       <%# <p class="text-center"> <%= current_user.daily_sessions %>
     </div>
+
   </div>
 </div>
