@@ -6,6 +6,8 @@ class ThemesController < ApplicationController
 
   def show
     # @theme = Theme.find(params[:id])
+    @study_session = StudySession.find(params[:id])
+    @intention = @study_session.intention
   end
 
   def new
