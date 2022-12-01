@@ -10,6 +10,9 @@ application.register("clock", ClockController)
 import CountdownTimerController from "./countdown_timer_controller"
 application.register("countdown-timer", CountdownTimerController)
 
+import LoaderController from "./loader_controller"
+application.register("loader", LoaderController)
+
 import MyTimerController from "./my_timer_controller"
 application.register("my-timer", MyTimerController)
 

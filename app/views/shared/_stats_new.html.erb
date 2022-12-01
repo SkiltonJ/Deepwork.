@@ -1,7 +1,7 @@
 <div class="stats-container-2">
   <div class="xp-container" data-controller="xp">
     <div class="stats-bar">
-      <p class="progress-text-2">Your total Deepwork time is <%= current_user.duration %> minutes</p>
+      <p class="progress-text-2" id="titles">Your total Deepwork time is <%= current_user.duration %> minutes</p>
       <div class="progress">
       <p id="next-level"><%= current_user.duration %></p>
         <div class="progress-fill-1-new" id="progress" data-minutes="<%= current_user.duration %>" data-level="<%= current_user.current_level %>">
@@ -10,7 +10,7 @@
       <p class="progress-bar-text"> Level <%= current_user.current_level %></p>
     </div>
     <div>
-      <h4 class="text-center"> <%= @week_minutes %> Deepwork minutes this week </h4>
+      <h4 class="text-center" id="titles"> <%= @week_minutes %> Deepwork minutes this week </h4>
     </div>
     <%# Create new chart for daily minutes and session amounts %>
     <div class="chart">
@@ -21,7 +21,7 @@
 <br>
 
      <div class="chart">
-      <h4 class="text-center"><%= @week_sessions %> Deepwork sessions this week</h4>
+      <h4 class="text-center" id="titles"><%= @week_sessions %> Deepwork sessions this week</h4>
       <%= line_chart @number_of_sessions, colors: ["#0f8b8b"], ytitle: "Deepwork sessions", max: 10 %>
       <%# <p class="text-center"> <%= current_user.daily_sessions %>
     </div>

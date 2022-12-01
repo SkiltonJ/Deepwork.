@@ -22,6 +22,7 @@ class PagesController < ApplicationController
     # @last_theme = Theme.third
     @themes_reverse = @themes.reverse
     @vibes = ["tranquil", "nature", "calming", "deep", "intense"]
+    @end_greetings = ["Amazing work!, keep the energy up!", "Solid session, one session better than before!", "Badass."]
   end
 
   def quickstart

@@ -50,6 +50,12 @@
   align-items: center;
   margin: 20px 10px 10px 10px;
   border-bottom: 1px solid #0f8b8b;
+  font-family: $satoshi;
+  h4 {
+    font-family: $satoshi;
+    font-weight: 400;
+    font-size: 28px;
+  }
 }
 .top-section {
   position: relative;
@@ -68,6 +74,8 @@
 .nav {
   padding: 15px 0px 15px 5px;
   align-items: center;
+  font-family: $satoshi;
+  font-size: 18px;
   a {
     position: relative;
     padding: 15px 0px 15px 5px;
@@ -123,6 +131,7 @@
   h3 {
     font-family: $zodiak;
     font-weight: 350;
+    font-size: 26px;
   }
 }
 .environments {
