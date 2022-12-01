@@ -15,7 +15,7 @@ export default class extends Controller {
       } else {
         clearInterval(fadeEffect);
       }
-    }, 300);
+    }, 3800);
     window.addEventListener('load', fadeOutEffect());
   }
 }

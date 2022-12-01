@@ -1,6 +1,9 @@
 <%# Partial that is rendered into the tab on the profile dashboard for the total list of themes %>
 
 <div class="tab-container">
+  <div class="empty-add-card">
+    <h5> <%= link_to "＋  Construct your environment", profile_path %></h5>
+  </div>
 <% @themes_reverse.each do |theme| %>
   <div class="environments-container">
     <div class="template-card-dash-2" style="background-image: url(<%=theme.thumbnail%>);">
