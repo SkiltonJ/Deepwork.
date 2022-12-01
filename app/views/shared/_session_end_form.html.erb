@@ -8,14 +8,14 @@
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="staticBackdropLabel">Session complete</h1>
+      <div class="modal-header" id="header">
+        <h1 class="modal-title " id="staticBackdropLabel">Session complete</h1>
         <%= link_to profile_path do %>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         <% end %>
       </div>
       <div class="modal-body">
-        <p>Great session! what would you like to do next?</p>
+        <p><%= @end_greetings.sample %> What would you like to do next?</p>
         <!-- this modal pops up on the profile page once the session is completed -->
         <!-- this is where we want to offer two buttons -->
         <!-- first - restart session that will take you to the same template as the session you just completed -->

@@ -64,7 +64,6 @@ export default class extends Controller {
     }
 
     // setInterval(updateCounters, 2000);
-    // clicking the button acts as a session ending.
     updateCounters();
   }
 }

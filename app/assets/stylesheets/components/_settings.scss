@@ -1,0 +1,21 @@
+
+// Settings tab content css
+
+.settings-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.settings-list {
+  .simple-link {
+    text-decoration: none;
+    color: $black;
+  }
+  p {
+    font-size: 18px;
+    font-family: $satoshi;
+    padding: 10px;
+    &:hover {
+      background-color: #6666;
+    }
+  }
+}
