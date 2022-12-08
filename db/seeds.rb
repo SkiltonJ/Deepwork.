@@ -28,10 +28,10 @@
 puts "Destroying themes"
 Theme.destroy_all
 
-Theme.create(name: "Baroque Forest", study_duration: 25, render: "themes/theme_4", thumbnail: "assets/wave_forest_thumbnail.png");
-Theme.create(name: "Gamma", study_duration: 25, render: "themes/theme_1", thumbnail: "assets/gamma_thumbnail.png")
-Theme.create(name: "Baroque", study_duration: 25, render: "themes/theme_2", thumbnail: "assets/baroque_thumbnail.png")
-Theme.create(name: "Browne", study_duration: 25, render: "themes/theme_3", thumbnail: "assets/bird_background")
+Theme.create(name: "Baroque Forest", study_duration: 45, render: "themes/theme_4", thumbnail: "assets/wave_forest_thumbnail.png");
+Theme.create(name: "Gamma", study_duration: 45, render: "themes/theme_1", thumbnail: "assets/gamma_thumbnail.png")
+Theme.create(name: "Baroque", study_duration: 45, render: "themes/theme_2", thumbnail: "assets/baroque_thumbnail.png")
+Theme.create(name: "Browne", study_duration: 45, render: "themes/theme_3", thumbnail: "assets/bird_background")
 Theme.create(name: "Mountain Views", study_duration: 60, render: "themes/mountain", thumbnail: "assets/mountain.png")
 Theme.create(name: "Rainforest", study_duration: 45, render: "themes/forest", thumbnail: "assets/forest.png")
 Theme.create(name: "quickstart", study_duration: 30, render: "themes/snow_theme", thumbnail: "assets/background_snap.png")
