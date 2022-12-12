@@ -14,6 +14,16 @@ class TopicsController < ApplicationController
     end
   end
 
+  def update
+    @topic = Topic.find(params[:id])
+    @topic.update(topic_params)
+    if @topic.save
+      render head: :ok
+    else
+      render :back, status: :unprocessable_entity
+    end
+  end
+
   private
 
   def topic_params

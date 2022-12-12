@@ -24,6 +24,12 @@ class User < ApplicationRecord
       6
     elsif duration < 2800
       7
+    elsif duration < 3600
+      8
+    elsif duration < 4500
+      9
+    elsif duration < 5500
+      10
     end
   end
 
