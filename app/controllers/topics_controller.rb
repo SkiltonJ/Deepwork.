@@ -13,6 +13,16 @@ class TopicsController < ApplicationController
       render "pages/profile", status: :unprocessable_entity
     end
   end
+# added this topic update but haven't built the HTML / CSS for it.
+  def update
+    @topic = Topic.find(params[:id])
+    @topic.update(topic_params)
+    if @topic.save
+      render head: :ok
+    else
+      render :back, status: :unprocessable_entity
+    end
+  end
 
   private
 
