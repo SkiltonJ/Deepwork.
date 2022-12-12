@@ -16,5 +16,5 @@ Rails.application.routes.draw do
   end
   # get "/study_session/:id", to: "study_sessions#show", as: :study_session
 
-  resources :topics, only: [:create, :destroy]
+  resources :topics, only: [:create, :destroy, :update]
 end
