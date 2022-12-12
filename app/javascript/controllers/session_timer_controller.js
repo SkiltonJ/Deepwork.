@@ -2,6 +2,13 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="session-timer"
 export default class extends Controller {
+  static targets = ["intention"]
+
+  disconnect() {
+    console.log("LEAVE")
+    clearInterval(this.hehe)
+  }
+
   connect() {
     let hours, minutes, seconds; // variables for time units
 
@@ -23,34 +30,30 @@ export default class extends Controller {
           getCountdown(target_date)
           console.log('timer counting');
         }, 200);
-    });
+      });
 
-    const getCountdown = (target_date) => {
-      if(document.baseURI !== "http://localhost:3000/profile"){
+      const getCountdown = (target_date) => {
+        if(document.baseURI !== "http://localhost:3000/profile"){
 
-        let current_date = (new Date().getTime() / 1000);
-        let seconds_left = Math.floor(target_date - current_date);
-        console.log(current_date < target_date)
-        // find the amount of "seconds" between now and target
-        hours = pad( parseInt(seconds_left / 3600) );
-        seconds_left = seconds_left % 3600;
+          let current_date = (new Date().getTime() / 1000);
+          let seconds_left = Math.floor(target_date - current_date);
+          console.log(current_date < target_date)
+          // find the amount of "seconds" between now and target
+          hours = pad( parseInt(seconds_left / 3600) );
+          seconds_left = seconds_left % 3600;
 
-        minutes = pad( parseInt(seconds_left / 60) );
-        seconds = pad( parseInt(seconds_left % 60 ) );
+          minutes = pad( parseInt(seconds_left / 60) );
+          seconds = pad( parseInt(seconds_left % 60 ) );
 
-        // format countdown string + set tag value
-        countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
-        console.log(seconds_left);
+          // format countdown string + set tag value
+          countdown.innerHTML = "<span>" + hours + "</span><span>" + minutes + "</span><span>" + seconds + "</span>";
+          console.log(seconds_left);
 
-        if (seconds_left <= 0) {
-          // console.dir(document)
-          countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
+          if (seconds_left <= 0) {
+            // console.dir(document)
+            countdown.innerHTML = "<span>" + '00' + "</span><span>" + '00' + "</span><span>" + '00' + "</span>";
           clearInterval(this.hehe)
           leaveSession.click()
-          clearInterval(this.hehe)
-          setTimeout(function () {
-            console.log('waiting....');
-          }, 2000);
         }
       }
     }
@@ -65,5 +68,11 @@ export default class extends Controller {
     }
 
 
+  }
+
+  showIntention(event) {
+    console.dir(event.target[3].value)
+    console.log(this.intentionTarget)
+    this.intentionTarget.innerHTML = event.target[3].value
   }
 }
