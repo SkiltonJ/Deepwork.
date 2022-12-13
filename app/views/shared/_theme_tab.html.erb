@@ -8,6 +8,11 @@
   <div class="environments-container">
     <div class="template-card-dash-2" style="background-image: url(<%=theme.thumbnail%>);">
     </div>
+    <div class="start-button">
+      <%= link_to theme_study_sessions_path(theme), data: { turbo_method: :post } do %>
+        <p>START</p>
+      <% end %>
+    </div>
     <div class="envr-content">
       <div class="envr-title">
         <h4><%= theme.name.capitalize %></h4>
