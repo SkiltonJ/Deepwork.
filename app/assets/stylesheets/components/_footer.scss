@@ -26,3 +26,20 @@
     margin: 0 20px;
   }
 }
+
+
+
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+  .footer-container {
+    margin: 0px;
+  }
+  .footer-content {
+    margin: 0px;
+    padding: 20px 10px 5px;
+  }
+  .right-f {
+    p {
+      margin: 0px 10px;
+    }
+  }
+}

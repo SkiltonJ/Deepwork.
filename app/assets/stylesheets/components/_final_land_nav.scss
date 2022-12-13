@@ -58,3 +58,33 @@
     color: $smoke-grey;
   }
 }
+
+
+
+// Tablet Responsive
+@media only screen and (min-width: 768px) {
+
+}
+
+// Phone Responsive
+@media only screen and  (min-width: 200px) and (max-width: 700px) {
+  .nav-contents {
+    padding: 10px 10px 0px 10px;
+  }
+  .nav-left {
+    h4 {
+      font-size: 32px;
+    }
+  }
+  .nav-right {
+    p {
+      margin-top: 10px;
+    }
+  }
+  .nav-login-landing {
+    padding: 5px 10px;
+  }
+  .nav-sign-up-landing {
+    padding: 5px 10px;
+  }
+}
