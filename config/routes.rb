@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get "/profile", to: "pages#profile"
   get "/quickstart", to: "pages#quickstart"
   get "/tease", to: "pages#tease"
-  get "/matt", to: "pages#creation"
+  get "/builder", to: "pages#creation"
   # Defines the root path route ("/")
   # root "articles#index"
   resources :themes do

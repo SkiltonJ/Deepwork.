@@ -6,6 +6,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   // position: fixed;
+  position: relative;
 }
 
 .timer-location {
@@ -14,4 +15,18 @@
   width: 100%;
   // top: 290px;
   left: -30vw;
+}
+
+.leave-button-container {
+  position: absolute;
+  top: 72.5%;
+  left: 60%;
+  transform: rotate(3.9deg);
+  a {
+    font-size: 28px;
+    letter-spacing: 2px;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 3px 3px 3px rgb(0, 0, 0);
+  }
 }

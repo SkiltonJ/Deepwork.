@@ -3,5 +3,13 @@
   <%# <%= render "shared/pomodoro" %>
   <div class="timer-location">
     <%= render "shared/minimal_timer", opacity: 1 %>
+    <p class="theme-intention-light" data-session-timer-target="intention"></p>
   </div>
+   <%# Leave Button %>
+    <div class="leave-button-container">
+      <%= link_to "Leave Session Early", study_session_update_duration_path(@study_session, modal_param: true),  data: { turbo_method: :patch} %>
+    </div>
 </div>
+
+<%# make the path the root path when designing a theme because we do not have the correct access built to use the path below on the creation url %>
+<%# study_session_update_duration_path %>
