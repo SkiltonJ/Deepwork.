@@ -13,7 +13,7 @@ class StudySessionsController < ApplicationController
 
   def create
     # @user = current_user
-    @theme = Theme.find(params[:theme_id])
+    @theme = params[:theme_id].present? ? Theme.find(params[:theme_id]) : Theme.first
     @session = StudySession.new
     @session.theme = @theme
     @session.user = current_user

@@ -1,1 +1,17 @@
-<%= render "components/countdown_timer" %>
+
+ <%# loader attempt %>
+ <div class="preloader" data-controller="loader">
+  <h3><%= @loading_greetings.sample %></h3>
+  <img src="http://static.demilked.com/wp-content/uploads/2016/06/gif-animations-replace-loading-screen-11.gif" alt="spinner">
+</div>
+
+<div data-controller="session-timer">
+  <%= render @study_session.theme.render %>
+  <div class="session">
+    <%= render "shared/session_form" %>
+  <div>
+  </div>
+</div>
+
+
+<%# <%= render "pages/countdown_timer" %>
