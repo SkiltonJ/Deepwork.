@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   get "/profile", to: "pages#profile"
-  get "/quickstart", to: "pages#quickstart"
+  post "/quickstart", to: "study_sessions#create", as: :quickstart
   get "/tease", to: "pages#tease"
   get "/builder", to: "pages#creation"
   # Defines the root path route ("/")

@@ -25,13 +25,11 @@
       <div class="header-p">
         <h3>Environments</h3>
         <div>
-        <%= render "shared/session_end_form" %>
+          <%= render "shared/session_end_form" %>
         </div>
-        <%= link_to theme_study_sessions_path(@themes.third), data: { turbo_method: :post} do %>
-          <div class="start"> <%= render "components/primary_button_profile" %></div>
-        <% end %>
-
-
+          <%= link_to theme_study_sessions_path(@themes.third), data: { turbo_method: :post} do %>
+            <div class="start"> <%= render "components/primary_button_profile" %></div>
+          <% end %>
       </div>
 
 
