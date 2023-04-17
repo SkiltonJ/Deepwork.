@@ -33,3 +33,4 @@ application.register("tab", TabController)
 
 import XpController from "./xp_controller"
 application.register("xp", XpController)
+
