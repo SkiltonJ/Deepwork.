@@ -10,7 +10,11 @@
         <h1>Get shit done.</h1>
         <p><span>Construct your atmosphere</span></p>
         <div class="cta">
+        <% if current_user %>
           <p><%= link_to "Quickstart", quickstart_path, method: :post, class:"button-home", data: { turbo_method: :post } %></p>
+        <% else %>
+        <p><%= link_to "Quickstart", quickstart_path, method: :post, class:"button-home", data: { turbo_method: :post }, onClick: "return showError()" %></p>
+        <% end %>
         </div>
       </div>
       <div class="right-hero">
@@ -63,3 +67,10 @@
 </section>
 
 <%= render "shared/footer" %>
+
+<script>
+  function showError() {
+    alert("You must be logged in to use Quickstart");
+    return false;
+  }
+</script>
